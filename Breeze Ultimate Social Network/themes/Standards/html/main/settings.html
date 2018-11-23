@@ -1,0 +1,21 @@
+<div class="brz-settings-nav-full brz-white">
+    <div class="brz-container-widel brz-padding-16 brz-padding">
+        <div class="brz-clear">
+        <div class="brz-left brz-responsive-big-styled brz-text-black brz-text-bold">{$TEXT->TEMP-settings_title}</div>
+        </div>
+    </div>
+	{$TEXT->TEMP-content}
+</div>
+<script>
+$(".brz-show-edit").mouseover(
+  function() {
+    $(this).find(".fa-pencil").fadeIn(0);
+  }
+);
+$(".brz-show-edit").mouseout(
+  function() {
+    $(this).find(".fa-pencil").fadeOut(0);
+  }
+);
+$(".brz-settings-nav-full").css("min-height",$(window).height())
+</script>

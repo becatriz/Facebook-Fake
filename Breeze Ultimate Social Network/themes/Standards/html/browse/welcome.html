@@ -1,0 +1,104 @@
+<!DOCTYPE html> 
+<html idmmzcc-ext-docid="298928128"><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252"><title>{$TEXT->title}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Attach FAVICON -->
+<link rel="apple-touch-icon" sizes="57x57" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/W3.css">
+<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/theme.css">
+<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/font-awesome.css">
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.js"></script>
+
+<!-- Import Navigation -->
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/navigation.js"></script>
+
+<!-- Apply font  -->
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+
+</head><body>
+
+<!-- Navbar -->
+<ul class="brz-navbar brz-white brz-text-grey brz-card-2 brz-top brz-left-align brz-medium" style="border-radius:0px !important;height:44px;">
+  <li class="brz-padding brz-hide-large brz-opennav brz-right" >
+    <span class="brz-large brz-white brz-text-grey" href="javascript:void(0);" onclick="nav_controller();" ><i class="fa fa-bars fa-fw brz-text-pink-light"></i></span>
+  </li>
+  <a class="brz-hover-white brz-left brz-padding" href="{$TEXT->installation}"><img style="width:27.5px;height:27px;margin-top:5px;" class="brz-hover-white" alt="{$TEXT->web_name}" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/brz.png"></a></li>
+  <li class="brz-padding brz-hide-medium brz-active"><a href="{$TEXT->installation}/browse/welcome" class=" brz-hover-white"><i class="fa fa-home brz-hover-white"></i> {$TEXT->_uni-Home}</a></li>
+  <li class="brz-padding brz-hide-medium brz-hide-small brz-hvr-active"><a href="{$TEXT->installation}/browse/privacy" class="brz-hover-white"><i class="fa fa-print brz-hover-white"></i> {$TEXT->_uni-Privacy_policy}</a></li>
+  <li class="brz-padding brz-hide-medium brz-hide-small brz-hvr-active"><a href="{$TEXT->installation}/browse/terms" class=" brz-hover-white"><i class="fa fa-file-text-o brz-hover-white"></i> {$TEXT->_uni-Terms_and_conditions}</a></li>
+  <li class="brz-padding brz-hide-medium brz-hide-small brz-hvr-active"><a href="{$TEXT->installation}/browse/developers" class=" brz-hover-white"><i class="fa fa-code brz-hover-white"></i> {$TEXT->_uni-Developers}</a></li>
+  <li class="brz-padding brz-hide-medium brz-hide-small brz-hvr-active"><a href="{$TEXT->installation}/browse/libs" class=" brz-hover-white"><i class="fa fa-book brz-hover-white brz-hover-white"></i> {$TEXT->_uni-Libraries}</a></li>
+</ul>
+
+<!-- Navbar on small screens -->
+<div id="tos_nav" class="brz-hide brz-hide-large brz-top" style="margin-top:44px;">
+  <ul class="brz-navbar brz-left-align brz-medium brz-white" style="border-radius:0px !important">
+    <li><a class="brz-medium brz-padding brz-text-grey brz-active" href="{$TEXT->installation}/browse/welcome"><i class="fa fa-home brz-hover-white"></i> {$TEXT->_uni-Home}</a></li>
+    <li><a class="brz-medium brz-padding brz-text-grey"href="{$TEXT->installation}/browse/privacy"><i class="fa fa-print brz-hover-white"></i> {$TEXT->_uni-Privacy_policy}</a></li>
+    <li><a class="brz-medium brz-padding brz-text-grey"href="{$TEXT->installation}/browse/terms"><i class="fa fa-file-text-o brz-hover-white"></i> {$TEXT->_uni-Terms_and_conditions}</a></li>
+    <li><a class="brz-medium brz-padding brz-text-grey" href="{$TEXT->installation}/browse/developers"><i class="fa fa-code brz-hover-white"></i> {$TEXT->_uni-Developers}</a></li>
+    <li><a class="brz-medium brz-padding brz-text-grey" href="{$TEXT->installation}/browse/libs"><i class="fa fa-book brz-hover-white brz-hover-white"></i> {$TEXT->_uni-Libraries}</a></li>
+  </ul>
+</div>
+
+<!-- get active language content -->
+{$TEXT->_html-welcome}
+
+<!-- Languages -->		 
+<div id="languages" style="display:none;" class="brz-modal">
+	<div class="brz-modal-content2 brz-animate-zoom brz-clear brz-card-8" style="height:auto;">
+		<div class="brz-border brz-border-pink">
+			<div class="brz-pink-light brz-clear brz-padding brz-medium brz-text-bold brz-full">
+			    <span class="brz-left">{$TEXT->_uni-Languages}</span>
+			</div>
+			<div style="max-height:200px;overflow:auto;" class="brz-white nicescrollit brz-clear brz-padding brz-small brz-full">
+			    <span class="brz-left">{$TEXT->TEMP-available-languages}</span>
+			</div>
+			<div class="brz-super-grey brz-clear brz-border-top brz-padding brz-small brz-full">
+			    <div onclick="$('#languages').fadeOut();" class="brz-tag brz-blue brz-hover-blue-hd brz-padding brz-cursor-pointer brz-right brz-text-white brz-text-bold brz-small">{$TEXT->_uni-CLOSE}</div>
+			</div>
+		</div>	
+	</div>
+</div>
+
+<div class="brz-container brz-center brz-padding-64">
+    <h1 class="brz-margin"> <a href="{$TEXT->installation}" style="text-decoration:none;margin-top:-13px;" class="brz-responsive-xxxxbig-styled brz-padding brz-round brz-blue-hd brz-margin-left-small brz-hover-opacity">{$TEXT->_uni-Get_started}</a></h1>
+</div>
+<div class="brz-white brz-container brz-welcome-padding brz-card">
+	<span style="padding:0px !important;" class="brz-container brz-text-grey brz-small">
+	    {$TEXT->_uni-Language} : {$TEXT->TEMP-active_lang} <button onclick="$('#languages').fadeIn();" class="brz-new_btn brz-act-it brz-round brz-padding-side brz-text-bold brz-tiny-2 brz-text-grey brz-margin-left"><i class="fa fa-plus brz-text-super-grey"></i></button>
+	</span>
+	<hr class="brz-margin">
+	<div class="brz-clear">
+		<a href="{$TEXT->installation}/browse/privacy" class="brz-text-blue-hd brz-welcome-text-item-1 brz-underline-hover brz-small">{$TEXT->_uni-Privacy}</a>
+		<a href="{$TEXT->installation}/browse/terms" class="brz-text-blue-hd brz-welcome-text-item-1 brz-underline-hover brz-small">{$TEXT->_uni-terms_}</a>
+		<a href="{$TEXT->installation}/browse/libs" class="brz-text-blue-hd brz-welcome-text-item-1 brz-underline-hover brz-small">{$TEXT->_uni-Libraries}</a>		
+	    <a href="{$TEXT->installation}/browse/developers" class="brz-text-blue-hd brz-welcome-text-item-1 brz-underline-hover brz-small">{$TEXT->_uni-Developers}</a>
+		<span onclick="$('#languages').fadeIn();" class="brz-text-blue-hd brz-welcome-text-item-1 brz-cursor-pointer brz-underline-hover brz-small">{$TEXT->_uni-Languages}</span>	
+	</div>
+
+	<div style="margin-top:10px !important;" class="brz-container brz-tiny brz-text-black">
+	    <span class="brz-small">&copy;</span> {$TEXT->web_name} {$TEXT->_uni-All_rights_reserved}
+	</div>
+</div>  
+</body>
+</html>

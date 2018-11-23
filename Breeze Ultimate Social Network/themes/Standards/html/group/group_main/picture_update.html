@@ -1,0 +1,26 @@
+<div class="brz-display-topleft brz-margin brz-small brz-display-hover">
+    <form id="uGc-2" name="uGc-2" action="{$TEXT->installation}/require/requests/update/group_cover_photo.php" onsubmit ="return false;" method="POST" enctype="multipart/form-data" target="uGc-t-2">   
+        <label id="btn-cover-chn" class="brz-button brz-hover-btnn2" for="uGc-f-2" >
+		    <i class="fa fa-camera"></i> &nbsp; 
+		    <span class="brz-hide-small brz-hide-medium">
+		        {$TEXT->_uni-Update_cover_photo}
+		    </span>
+		</label>
+        <input style="display:none!important;" name="uGc-f-2" id="uGc-f-2" type="file"/>
+        <input id="group-cover-form-id" name="group-cover-form-id" class="brz-hide" value="{$TEXT->temp-group_id}"/>
+        <iframe id="uGc-t-2" name="uGc-t-2" src="" style="display: none"></iframe>
+    </form>	
+</div>
+<script>
+    $("#uGc-f-2").on('change', function(event){	
+        $(document).on('change', ':file', function () {
+            if($("#uGc-f-2").val()) {
+                // Start buttonloader
+                smartLoader(1,'#btn-cover-chn');
+	    
+                // Submit photo form	
+                document.getElementById("uGc-2").submit();				
+            }
+        });
+    });
+</script>

@@ -1,0 +1,58 @@
+<div id="S_LEFT_CONTENT" class="G-PAGE-NAV">
+	<div class="brz-group-nbtn">
+		<div class="brz-noresponsive-styled brz-black-hd">{$TEXT->temp-group-name}
+			<div class="brz-small">        
+				{$TEXT->temp-group-type}							
+			</div>
+		</div>
+	</div>
+	
+	
+	<div class="brz-margin-top">
+	    
+		<!-- EXT_SLOT_NAV_1 -->
+	
+		<div>
+			<a id="brz-add-GNav-15" style="font-size:14px !important;" class="brz-list2 brz-group-nbtn brz-cursor-pointer brz-hover-n_active brz-hover-n_active_hover" onclick="groupFeeds({$TEXT->TEMP_GROUP_ID},0,5);">
+				&nbsp; {$TEXT->_uni-Discussions}
+				<img class="brz-right brz-padding" style="display:none;" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/search_loader.gif"></img>
+			</a>
+		</div>
+	
+		<div>
+			<a id="brz-add-GNav-11" style="font-size:14px !important;" class="brz-list2 brz-group-nbtn brz-cursor-pointer brz-hover-n_active_hover" onclick="groupMembers({$TEXT->TEMP_GROUP_ID},0,5);">
+				&nbsp; {$TEXT->_uni-Members}
+				<img class="brz-right brz-padding" style="display:none;" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/search_loader.gif"></img>
+			</a>
+		</div>
+		
+		<!-- EXT_SLOT_NAV_2 -->
+		
+		{$TEXT->TEMP-NAV-ITEMS}
+		
+		<!-- EXT_SLOT_NAV_3 -->
+
+	</div>	
+	
+	<div class="brz-margin-top">
+	
+	    <span style="margin-top:5px !important;" class="brz-text-bold brz-small brz-text-body-it brz-opacity" >
+			{$TEXT->_uni-Shortcuts}
+		</span>
+
+		{$TEXT->TEMP-NAV-SHORTCUTS}
+		
+	    <span style="margin-top:5px !important;" class="brz-text-bold brz-small brz-text-body-it brz-opacity" >
+			{$TEXT->_uni-Create}
+		</span>
+
+		<div class="brz-padding-left">
+			<span onclick="locate('{$TEXT->installation}/?new=page');" class="brz-text-blue-dark brz-small brz-underline-hover brz-cursor-pointer">{$TEXT->_uni-Page}</span> -
+			<span onclick="loadModal(1);loadGroup(0,14,32);" class="brz-text-blue-dark brz-small brz-underline-hover brz-cursor-pointer">{$TEXT->_uni-Group}</span>
+		
+		</div>		
+
+	</div>
+	<br><br><br>
+	
+</div>

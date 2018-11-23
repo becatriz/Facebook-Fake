@@ -1,0 +1,298 @@
+<!-- Update status || photo || YouTube -->
+<div id="present-post-modal" onclick="togglePostForm(0);" style="display:none;" class="brz-modal brz-modal-full-black"></div>
+
+<div id="POST_FORM" onclick="togglePostForm(1);" class="brz-new-container">
+	
+	<div id="status-t4njhsdf" class="element-select-3">
+	    <div class="brz-white ">
+			
+			<div id="simple_post_img" class="brz-left" style="width:52px;">
+			    <img style="float: left;margin: 12px 0 0 12px;" class="brz-border" src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-image}&fol=pa&w=40&h=40">
+			</div>
+			
+			<form id="update-status-form-data" action="{$TEXT->installation}/require/requests/update/status.php" method="POST" target="update-status-form-target" method="POST"  enctype="multipart/form-data">	
+				
+				<div id="simple_post" style="padding:12px 12px 10px 8px;">	
+					<div class="brz-rest">
+						<div style="padding:12px 12px 12px 8px;" >
+	        				<textarea id="update-status-form-text" name="update-status-form-text" style="border: none;max-width:100%;min-width:100%;height:28px;" class="brz-hide" placeholder="{$TEXT->_uni-whats_mind}"></textarea>
+	        			
+							<div class="outerContainer" contenteditable="false">
+								<div ondrop="return false;" id="update-status-form-text-viewable" contentEditable="true" name="update-status-form-text" style="border: none;max-width:100%;min-width:100%;min-height:28px;" data-text="{$TEXT->_uni-Write_something}" class="brz-small brz-bb-sm"></div>
+				    		</div>
+							<div class="brz-hide" contenteditable="false" id="update-status-form-text-viewable-2"></div>
+							<input multiple="multiple" type="file" name="update-status-form-file[]" class="brz-hide" id="update-status-form-file" />
+							<input id="post-status-feeling-input-type" name="post-status-feeling-input-type" class="brz-hide" value="">
+							<input id="update-status-emoji-target" name="update-status-emoji-target" class="brz-hide" value="#update-status-form-text-viewable">
+							<input id="update-status-emoji-target-back" name="update-status-emoji-target-back" class="brz-hide" value="">
+			    		    <input id="PAGE_ID" name="PAGE_ID" value="{$TEXT->TEMP_PAGE_ID}" class="brz-hide" > </input>
+						</div>
+					</div>
+
+				</div>
+				
+				<!-- Background posts -->
+				<div id="bb_post" style="display:none;height:260px;" class="brz-full brz-bb-big brz-margin-bottom brz-no-overflow brz-display-container brz-text-white brz-text-bold brz-clear">
+					
+					<div class="outerContainer brz-full brz-center brz-display-middle brz-no-overflow" contenteditable="false">
+					    <div ondrop="return false;" onpaste="return false;" id="update-status-form-btext-viewable" contentEditable="true" name="update-status-form-text" data-text="{$TEXT->_uni-whats_mind}" class="brz-large brz-full brz-padding"></div>
+				    </div>
+							
+				</div>
+				
+				<div class="brz-full brz-clear">
+					
+					<div style="display:none;min-height:30px;" id="background_select" style="padding:0px 12px 5px 15px;" class="brz-block">	
+										
+						<div id="background_select_close" style="position:absolute;left:12px;" onclick="toggleBackgroundSelect(0);" class="brz-inline brz-editable brz-cursor-pointer brz-margin-right-small">
+  							<div class="brz-circle">
+      						    <i class="fa fa-chevron-left brz-text-grey"></i>
+							</div>
+    					</div>
+					    <div id="background_select_1" onclick="newBB('none',0);" style="position:absolute;left:38px;" class="brz-inline brz-editable brz-margin-right-small">
+  							<div class="brz-circle">
+      							<img class="brz-circle brz-active-bb brz-card-2 brz-border brz-border-white" src="{$TEXT->installation}/thumb.php?src=white.png&fol=bb&w=46&h=46">
+    						</div>
+    					</div>		
+						<div id="background_select_2" onclick="newBB('{$TEXT->BACK_1}',2);" style="position:absolute;left:64px; " class="brz-inline brz-editable brz-margin-right-small">
+  							<div class="brz-circle">
+      							<img class="brz-circle brz-active-bb brz-card-2 brz-border brz-border-white" src="{$TEXT->installation}/thumb.php?src={$TEXT->BACK_1}.jpg&fol=bb&w=46&h=46">
+    						</div>
+    					</div>
+						<div id="background_select_3" onclick="newBB('{$TEXT->BACK_2}',3);" style="position:absolute;left:90px; " class="brz-inline brz-editable brz-margin-right-small">
+  							<div class="brz-circle">
+      							<img class="brz-circle brz-active-bb brz-card-2 brz-border brz-border-white" src="{$TEXT->installation}/thumb.php?src={$TEXT->BACK_2}.jpg&fol=bb&w=46&h=46">
+    						</div>
+    					</div>
+						<div id="background_select_4" onclick="newBB('{$TEXT->BACK_3}',4);" style="position:absolute;left:114px; " class="brz-inline brz-editable brz-margin-right-small">
+  							<div class="brz-circle">
+      							<img class="brz-circle brz-active-bb brz-card-2 brz-border brz-border-white" src="{$TEXT->installation}/thumb.php?src={$TEXT->BACK_3}.jpg&fol=bb&w=46&h=46">
+    						</div>
+    					</div>	
+						<div id="background_select_5" onclick="newBB('{$TEXT->BACK_4}',5);" style="position:absolute;left:138px; " class="brz-inline brz-editable brz-margin-right-small">
+  							<div class="brz-circle">
+      							<img class="brz-circle brz-active-bb brz-card-2 brz-border brz-border-white" src="{$TEXT->installation}/thumb.php?src={$TEXT->BACK_4}.jpg&fol=bb&w=46&h=46">
+    						</div>
+    					</div>
+						<div id="background_select_6" onclick="newBB('{$TEXT->BACK_5}',6);" style="position:absolute;left:162px; " class="brz-inline brz-editable brz-margin-right-small">
+  							<div class="brz-circle">
+      							<img class="brz-circle brz-active-bb brz-card-2 brz-border brz-border-white" src="{$TEXT->installation}/thumb.php?src={$TEXT->BACK_5}.jpg&fol=bb&w=46&h=46">
+    						</div>
+    					</div>
+						<div id="background_select_7" onclick="newBB('{$TEXT->BACK_6}',7);" style="position:absolute;left:186px; " class="brz-inline brz-editable brz-margin-right-small">
+  							<div class="brz-circle">
+      							<img class="brz-circle brz-active-bb brz-card-2 brz-border brz-border-white" src="{$TEXT->installation}/thumb.php?src={$TEXT->BACK_6}.jpg&fol=bb&w=46&h=46">
+    						</div>
+    					</div>						
+						<div id="background_select_8" onclick="newBB('{$TEXT->BACK_7}',8);" style="position:absolute;left:210px; " class="brz-inline brz-editable brz-margin-right-small">
+  							<div class="brz-circle">
+      							<img class="brz-circle brz-active-bb brz-card-2 brz-border brz-border-white" src="{$TEXT->installation}/thumb.php?src={$TEXT->BACK_7}.jpg&fol=bb&w=46&h=46">
+    						</div>
+    					</div>
+						<div id="background_select_9" onclick="newBB('{$TEXT->BACK_8}',9);" style="position:absolute;left:234px; " class="brz-inline brz-editable brz-margin-right-small">
+  							<div class="brz-circle">
+      							<img class="brz-circle brz-active-bb brz-card-2 brz-border brz-border-white" src="{$TEXT->installation}/thumb.php?src={$TEXT->BACK_8}.jpg&fol=bb&w=46&h=46">
+    						</div>
+    					</div>
+						<div id="background_select_10" onclick="newBB('{$TEXT->BACK_9}',10);" style="position:absolute;left:258px; " class="brz-inline brz-editable brz-margin-right-small">
+  							<div class="brz-circle">
+      							<img class="brz-circle brz-active-bb brz-card-2 brz-border brz-border-white" src="{$TEXT->installation}/thumb.php?src={$TEXT->BACK_9}.jpg&fol=bb&w=46&h=46">
+    						</div>
+    					</div>
+						<div id="background_select_11" onclick="newBB('{$TEXT->BACK_10}',11);" style="position:absolute;left:282px; " class="brz-inline brz-editable brz-margin-right-small">
+  							<div class="brz-circle">
+      							<img class="brz-circle brz-active-bb brz-card-2 brz-border brz-border-white" src="{$TEXT->installation}/thumb.php?src={$TEXT->BACK_10}.jpg&fol=bb&w=46&h=46">
+    						</div>
+    					</div>						
+						<div id="background_select_open" style="position:absolute;left:12px;display:none;" onclick="toggleBackgroundSelect(1);" class="brz-inline brz-cursor-pointer brz-margin-right-small">
+  							<div class="brz-circle">
+      							<img class="brz-circle brz-active-bb" src="{$TEXT->installation}/thumb.php?src=chooser.png&fol=bb&w=46&h=46">
+    						</div>
+    					</div>	
+ 
+						<span id="post-form-emoji-trigger" class="brz-dropdown-clicked brz-right brz-padding brz-margin-top" >
+                            <div onclick="$('#post-form-emoji-drop').toggleClass('brz-show');getContent('emoji-selecter','#content-emoji-all','#get-post-form-emoji-selecter');" class="brz-text-bold brz-large brz-text-grey">
+						        <i class="fa fa-smile-o"></i>
+						    </div>
+                            <div id="post-form-emoji-drop" class="brz-dropdown-content brz-trasnparent" style="right:0;max-width:350px;min-width:300px;;">  
+							    <div style="height:12px;">
+								    <img style="position:absolute;top:0px;right:5px;max-height:200px;overflow:auto" class="brz-img-drop-down-cat" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAeAQMAAABUn9+/AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAAxJREFUeNpjYBhZAAAA8AABOGlaUQAAAABJRU5ErkJggg==">
+							    </div>
+						        <div id="get-post-form-emoji-selecter" data-add-emoji-id="" class="brz-white brz-center bz-clear getContent brz-padding brz-border brz-padding-8 brz-card-4 brz-hover-shadow">
+							        <span class="brz-padding-jumbo" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/search_loader.gif">
+							    	    {$TEXT->_uni-Emoji_loading} <img src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/search_loader.gif"></img>
+							        </span>
+                                </div>
+						    </div>
+                        </span>
+					
+  					</div>
+				</div>
+				<div style="padding:0px 12px 10px 8px;">
+					<hr style="margin:0 12px 0 12px;">
+			    </div>
+			</form>
+			
+			<div class="brz-clear" id="page_form_contents" style="padding:0px 12px 5px 12px;display:none;">
+			    
+				<span class="">
+					<label id="post-file-1" for="update-status-form-file" class="nav-item-new-button brz-noselect brz-text-bold nav-item-text-black"><img class="nav-item-text-inverse-reverse-2 brz-img-add-photo" alt="" src="{$TEXT->DATA-IMG-12}"></img>   {$TEXT->_uni-Add_photo}</label>
+				</span>
+								
+				<script>
+
+					// Check content length
+					$('#update-status-form-btext-viewable').on('keydown', function() {
+						checkContentbb();
+						
+					});
+					
+					function checkContentbb() {
+						
+						// Get html
+						var container = $('<div>').html($("#update-status-form-btext-viewable").html());
+						container.find("span,br").remove();
+						myhtml = container.html();
+						
+						var imgs = $("#update-status-form-btext-viewable img").length;
+						
+						// Remove tags
+						myhtml = myhtml.replace(/<!--.*?-->/g, "").replace(/&nbsp;/g,''); 
+						
+						var chars = myhtml.length;
+						
+						// Switch post type if chars exceeds
+						if(((5*imgs) + chars) > 80) {
+							newBB('none',0);			
+						}
+					}
+					
+					function newBB(bb,id) {
+						$("#background_select .brz-border-bold-active").removeClass("brz-border-bold-active");
+					    $("#background_select_"+id+" img").addClass("brz-border-bold-active");
+						
+						if(id==0) {
+							switchBB();	
+						} else {
+							$("#simple_post,#simple_post_img").hide();
+						    $("#bb_post").css("background","url({$TEXT->installation}/thumb.php?src="+bb+".jpg&fol=bb&w=600&h=260) center no-repeat").show();	
+						    $("#update-status-emoji-target").val("#update-status-form-btext-viewable");
+						    $("#update-status-emoji-target-back").val(bb);
+						}		
+					}
+					
+					function switchBB() {
+						toggleBackgroundSelect(0);
+						$("#simple_post,#simple_post_img").show();
+						$("#bb_post").hide();
+						$("#update-status-form-text-viewable").focus();
+						$("#update-status-emoji-target").val("#update-status-form-text-viewable");
+						$("#update-status-form-text-viewable").html($("#update-status-form-btext-viewable").html());
+						$("#update-status-form-btext-viewable").html("");
+					}
+					
+					// Manage window on scroll
+					$(window).on('scroll', function() {                
+						if($("#POST_FORM").hasClass("ACTIVE-FORM")) {
+							var scrollTop = $(this).scrollTop();
+                        	var topDistance = $("#update-status-form-submit").offset().top + 100;
+                        	if ( (topDistance+100) < scrollTop ) {
+						    	$("#present-post-modal").click();
+                        	}
+						
+						}
+                    });
+					
+					function toggleBackgroundSelect(t) {
+						if(t==0){
+							$("#background_select .brz-editable").css("position","absolute");
+							$("#background_select .brz-editable").animate({left: '12px',opacity: '0.5'},300);
+							$("#background_select_open").fadeIn();$("#background_select_close").hide();
+						} else {
+							$("#background_select_open").hide();$("#background_select_close").show();
+							$("#background_select_close").animate({left: '12px',opacity: '1'},200);
+							$("#background_select_1").animate({left: '38px',opacity: '1'},200);
+							$("#background_select_2").animate({left: '64px',opacity: '1'},200);
+							$("#background_select_3").animate({left: '90px',opacity: '1'},200);
+							$("#background_select_4").animate({left: '114px',opacity: '1'},200);
+							$("#background_select_5").animate({left: '138px',opacity: '1'},200);
+							$("#background_select_6").animate({left: '162px',opacity: '1'},200);
+							$("#background_select_7").animate({left: '186px',opacity: '1'},200);
+							$("#background_select_8").animate({left: '210px',opacity: '1'},200);
+							$("#background_select_9").animate({left: '234px',opacity: '1'},200); 
+							$("#background_select_10").animate({left: '258px',opacity: '1'},200);
+							$("#background_select_11").animate({left: '282px',opacity: '1'},200);
+						}	
+					}
+	
+					function togglePostForm(t) {
+						if(t == 0) {     						
+                            $('#post-form-emoji-trigger').hide();							
+							$('#POST_FORM').removeClass('ACTIVE-FORM').prev().fadeOut(300,function(){$('#POST_FORM').css('z-index', '').css('position', '')});
+							$('#update-status-form-text-viewable').animate({ 'min-height': "28px" },300);
+							$('#update-status-form-text-viewable').css('max-height',28);
+							$('#update-status-form-submit, #page-status-submit-name').fadeOut(100,function(){$('#POST_BUTTON1,#page_form_contents').slideUp(100)});
+							$('#background_select').hide();	
+							$("#simple_post,#simple_post_img").show();
+							$("#bb_post").hide();
+							$("#update-status-emoji-target").val("#update-status-form-text-viewable");
+							$('#post-file-1 ,#post-form-profile-id-feeling , #post-form-profile-id-checkin').removeClass('brz-full').parent().removeClass('brz-active-post-btn brz-half');							
+							$("#background_select .brz-border-bold-active").removeClass("brz-border-bold-active");
+						} else {
+							$('#POST_FORM').addClass('ACTIVE-FORM').css('z-index', '7').css('position', 'relative').prev().fadeIn(500);
+                            $('#post-file-1').addClass('brz-full').parent().addClass('brz-active-post-btn brz-half');							
+							$('#update-status-form-text-viewable').animate({ 'min-height': "80px" },300);
+							$('#update-status-form-text-viewable').css('max-height','');
+							$('#POST_BUTTON1,#page_form_contents').slideDown(100,function(){$('#update-status-form-submit, #page-status-submit-name').fadeIn(200);});
+                            $('#post-form-emoji-trigger').fadeIn();
+							$('#background_select').show();
+                        }
+					}
+					
+					function resetPostform() {
+						$("#POST_REMOVE1").click();
+						$("#POST_REMOVE2").click();
+						$("#present-post-modal").click();
+						$('#update-status-form-submit').fadeOut(100,function(){$('#POST_BUTTON1').slideUp(100)});
+					}	
+
+				</script>
+			
+			</div>			
+		</div>
+		
+		<div id="POST_BUTTON1" style="display:none;" class="brz-new-grey-border-bottom brz-border-top brz-border-super-grey brz-super-grey brz-clear brz-padding-8 brz-padding-large brz-small brz-text-bold-2">
+		    <div class="brz-right">
+		        <span id="page-status-submit-name" style="display:none;" class="brz-padding"><img class="brz-circle" src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-page-image}&fol=pa&w=20&h=20"> {$TEXT->temp-page-name}</span>
+				<div id="update-status-form-submit" style="display:none;" name="update-status-form-submit" title="{$TEXT->_uni-ttl_post_a_sts2}" onclick="upStatus();" class="brz-tag brz-round brz-blue brz-hover-blue-hd brz-cursor-pointer brz-text-white brz-text-bold brz-small">{$TEXT->_uni-POST}</div> 
+			</div>
+		</div>
+	</div>
+
+	<!-- Universal iFrame for all forms above -->
+	<iframe id="update-status-form-target" name="update-status-form-target" src="" style="display: none"></iframe>
+
+</div>
+
+<!-- END FORM PAGE -->
+
+<script> 
+$("#update-status-form-file").on('change', function(event){	
+	$(document).on('change', ':file', function () {
+		if($("#update-status-form-file").val()) {
+			$('#post-file-1').addClass('brz-file-active-green').html('<img class="nav-item-text-inverse-reverse-2 brz-img-add-photo" alt="" src="{$TEXT->DATA-IMG-12}"></img>&nbsp;'+$("#update-status-form-file")[0].files.length +' {$TEXT->_uni-Selected}');
+		} else {
+		    $('#post-file-1').removeClass('brz-file-active-green').html('<img class="nav-item-text-inverse-reverse-2 brz-img-add-photo" alt="" src="{$TEXT->DATA-IMG-12}"></img>&nbsp; {$TEXT->_uni-Add_photo}');
+		}
+	}); 
+});	
+function addSmile(s,t) {
+    if(t == 1) {
+	    if($("#update-status-form-text").is(':visible')) {v = $("#update-status-form-text").val();$("#update-status-form-text").val(v+' '+s+' ');}
+	    if($("#update-status-form-text").is(':visible')) {v = $("#update-status-form-text").val();$("#update-status-form-text").val(v+' '+s+' ');}
+	    if($("#update-youtube-form-text").is(':visible')) {v = $("#update-youtube-form-text").val();$("#update-youtube-form-text").val(v+' '+s+' ');}
+	}
+}
+// Reload placeholder plugin if IE<10
+$("#POST_FORM").find('input, textarea').placeholder({customClass:'my-placeholder'});
+</script>

@@ -1,0 +1,57 @@
+<div id="S_LEFT_CONTENT" class="G-PAGE-NAV">
+		
+	<div class="brz-container brz-display-container">
+		<div style="max-width:165px;margin:0;" class="brz-round brz-border-super-grey brz-border-bottom">
+		    
+			<img style="width:100%;" id="profile_view_main_{$TEXT->TEMP_PAGE_ID}" class="brz-border-white brz-border-bold2" src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-image}&fol=pa&w=400&h=400">
+             {$TEXT->TEMP-NAV-UPDATE}
+		</div>
+	</div>
+	
+	<div id="S_LEFT_CONTENT_P" class="brz-group-nbtn">
+		<div onclick="loadPage({$TEXT->TEMP_PAGE_ID},1,1)" class="brz-noresponsive-styled brz-underline-hover  brz-cursor-pointer brz-black-hd">{$TEXT->temp-page-name}
+			<div class="brz-small">        
+				{$TEXT->temp-page-type}							
+			</div>
+		</div>
+	</div>
+	
+	
+	<div id="brz-GNAV_ALL" class="brz-margin-top">
+	
+	    <!-- EXT_SLOT_NAV_1 -->
+	
+		<div>
+			<a id="brz-add-GNav-15" style="font-size:14px !important;" class="brz-list2 brz-group-nbtn brz-cursor-pointer brz-hover-n_active brz-hover-n_active_hover" onclick="loadPage({$TEXT->TEMP_PAGE_ID},1,1);">
+				&nbsp; {$TEXT->_uni-Home}
+				<img class="brz-right brz-padding" style="display:none;" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/search_loader.gif"></img>
+			</a>
+		</div>
+	
+		<div>
+			<a id="brz-add-GNav-151" style="font-size:14px !important;" class="brz-list2 brz-group-nbtn brz-cursor-pointer brz-hover-n_active_hover" onclick="pageFeeds({$TEXT->TEMP_PAGE_ID},0,5,1);">
+				&nbsp; {$TEXT->_uni-Photos}
+				<img class="brz-right brz-padding" style="display:none;" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/search_loader.gif"></img>
+			</a>
+		</div>
+		
+		<div>
+			<a id="brz-add-GNav-152" style="font-size:14px !important;" class="brz-list2 brz-group-nbtn brz-cursor-pointer brz-hover-n_active_hover" onclick="pageFeeds({$TEXT->TEMP_PAGE_ID},0,5,2);">
+				&nbsp; {$TEXT->_uni-Videos}
+				<img class="brz-right brz-padding" style="display:none;" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/search_loader.gif"></img>
+			</a>
+		</div>
+		
+		<!-- EXT_SLOT_NAV_2 -->
+		
+		{$TEXT->TEMP-NAV-ITEMS}
+
+	</div>
+
+    <div class="brz-padding-8 brz-margin-top brz-clear">
+	
+		<div onclick="locate('{$TEXT->installation}/?new=page');" class="brz-greenary brz-small brz-cursor-pointer">{$TEXT->_uni-Create_Page}</div>
+	
+	</div>	
+	<br><br><br>
+</div>

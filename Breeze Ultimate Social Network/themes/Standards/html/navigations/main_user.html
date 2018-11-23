@@ -1,0 +1,239 @@
+<!-- Add CSS styles for search -->
+<style>
+.search-icon{background-image:url('{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/img_search.png')}
+.search-icon-loading{background-image:url('{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/search_loader.gif')}
+</style> 
+  
+<ul class="brz-navbar brz-pink-hd-2 brz-card-3 brz-top brz-left-align brz-medium" style="border-radius:0px !important;height:43px !important;">    
+    <div class="brz-clear brz-1400"> 
+        <span class="brz-padding brz-hide-large brz-opennav brz-left brz-no-image" onclick="toggle_side_nav();" style="margin-top:4px;">
+            <i style="margin-right:20px;" class="fa fa-bars brz-large fa-fw brz-text-shad brz-main-actiable brz-nav-opener"></i>
+        </span>	
+        <a class="brz-hide-small brz-hide-medium brz-left brz-padding" href="{$TEXT->installation}">
+		    <img  style="margin:3px 0px auto 20px;width:27.5px;height:27px;" alt="{$TEXT->web_name}" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/brz.png">
+		</a>	
+        <span class="brz-left" style="margin:9px 10px auto 0px;"> 
+		    <form id="345234123" name="345234123" onsubmit="return submitSearch(event);" >
+			    <input id="swsef89u3hj89sd" autocomplete="off" class="swsef89u3hj89sd brz-serch-main brz-left brz-input brz-animate-input brz-hover-white brz-text-grey brz-small input-icon search-icon" placeholder="{$TEXT->temp-Search_placeholder}" type="search"></input>
+			</form>
+		</span>	
+		
+		<div class="brz-margin-w brz-text-shad brz-right-desk">
+            
+			<img id="profile-avatar-top" style="margin:9px -12px 0px 0px;width:26px;height:26px;" title="{$TEXT->_uni-Profile_load_text3}" onclick="aOverlow();s23u89dssh();loadProfile(3);" src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-image}&fol=a&w=30&h=30" alt="..." class="brz-round brz-hide-medium brz-hide-small">
+			
+			<span class="brz-right" style="margin:9px 10px 0px 10px;">	
+  			    
+				<span class="brz-cursor-pointer brz-hide-medium brz-hide-small" onclick="loadProfile({$TEXT->temp-user_id});">  
+				    <span class="brz-text-white brz-small nav-item-text-inverse brz-padding brz-hover-dark-it brz-text-bold">{$TEXT->temp-Name_navigation_30}</span> <span class="brz-text-shad nav-item-text-inverse brz-opacity">|</span>	     
+		        </span>
+				
+			    <span title="{$TEXT->_uni-Home}" class="brz-cursor-pointer brz-hide-medium brz-hide-small" onclick="loadHome();">  
+				    <span class="brz-text-white brz-small nav-item-text-inverse brz-padding brz-hover-dark-it brz-text-bold">{$TEXT->_uni-Home}</span> <span class="brz-text-shad nav-item-text-inverse brz-opacity">|</span>	     
+		        </span>
+				
+			    <span title="{$TEXT->_uni-Trending_now}" class="brz-cursor-pointer brz-padding-right brz-hide-medium brz-hide-small" onclick="loadTrending(0,0,1);">  
+				    <span class="brz-text-white brz-small nav-item-text-inverse brz-padding brz-hover-dark-it brz-text-bold">{$TEXT->_uni-Trending}</span>     
+		        </span>
+				
+			    <span title="{$TEXT->_uni-Home}" class="brz-cursor-pointer brz-hide-large" onclick="loadHome();">  
+				    <i id="brz-class-home" class="fa fa-home brz-padding-right brz-large-min2 brz-text-white brz-main-actiable brz-class-home" ></i>	     
+		        </span>
+			
+                <span title="{$TEXT->_uni-Trending_now}" class="brz-cursor-pointer brz-hide-large brz-no-image" onclick="loadTrending(0,0,1);">
+				    <i id="brz-class-trending" class="fa brz-padding-right fa-star brz-large-min2 brz-text-shad brz-main-actiable brz-class-trending"></i>
+		        </span>
+				
+                <span title="{$TEXT->_uni-Messenger}" class="brz-cursor-pointer brz-display-container" onclick="loadChats(0,0,1);">
+					<span id="INBOX_COUNTER" style="margin:-10px 15px auto auto;" class="brz-display-topright brz-noselect brz-round brz-tiny-3 brz-red"></span>
+				    <i id="brz-class-chats" class="fa brz-padding-right fa-inbox brz-large-min2 brz-text-shad brz-main-actiable brz-class-chats"></i>      
+		        </span> 
+				
+                <span title="{$TEXT->_uni-Notifications}" class="brz-cursor-pointer brz-display-container brz-no-image" onclick="s23u89dsh();">
+				    <img style="position:fixed;top:35px;width:22px;height:10px;" class="brz-hide-small" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/box-top-edge.png">
+					<span id="dfbhne78342jsdf" style="margin:-10px 15px auto auto;" class="brz-display-topright brz-noselect brz-round brz-tiny-3 brz-red"></span>
+				    <i id="brz-class-notifications" class="fa brz-padding-right fa-globe brz-large-min2 brz-text-shad brz-main-actiable brz-class-notifications"></i>      
+		        </span> 
+			
+                <div id="367u8sdfv55ysdfg" style="width: 100%;height:100%;display: none;position: fixed;top: 43px;z-index:100;right:0px!important;box-sizing: border-box;" class="brz-full brz-padding-w">
+    
+	                <div class="brz-notification-content brz-text-left brz-super-grey brz-card-2 brz-right" >
+       
+		                <!-- Notifications title hide on large screens -->
+		                <div class="brz-padding brz-super-grey brz-text-grey brz-text-bold brz-small">{$TEXT->_uni-Notifications}</div>
+	    
+		                <!-- Notifications tob loader bar-->
+		                <div id="n23sd23-losdf43ad-1" class="load n23sd23-losdf43ad"></div>
+	 
+	                    <!-- Notifications container -->
+                        <div id="43if89" style="overflow:scroll !important;" class="brz-white brz-notific-c nicescrollit"></div>	
+		
+		                <!-- Notifications bottom bar loader-->
+	                    <div id="n23sd23-losdf43ad-2" class="load n23sd23-losdf43ad"></div>	
+		
+		                <!-- Notifications functions-->
+	                    <div id="4389zj-u549" class="brz-padding brz-super-grey brz-text-grey brz-center brz-text-bold brz-small">
+	        
+			                <!-- Load more notifications -->
+			                <span class="brz-cursor-pointer brz-hover-text-blue-dark" onclick = "s23u89dssh();loadNotifications();" style="width:100%">
+		                        {$TEXT->_uni-See_all}&nbsp;<span class="brz-hide-small">|</span>
+				
+		                    </span>
+			                <span id="78vn4we87v" class="brz-cursor-pointer brz-hide-small brz-hover-text-blue-dark" onclick = "t56zs3()" style="width:100%">
+		                        &nbsp;{$TEXT->uni_Load_more}&nbsp;
+		                    </span>
+			                <!-- No more notifications hidden by default -->
+	                        <span style="width:100%;display:none" id="fdg54sdr" class="brz-cursor-pointer">
+		                        &nbsp;{$TEXT->uni_No_more_notifications}
+		                    </span>
+	                    </div>
+                    </div>
+                </div>
+				
+                <span style="margin-left:10px;" title="{$TEXT->_uni-Help_center}" class="brz-cursor-pointer brz-dropdown-clicked brz-no-image brz-hide-small brz-hide-medium" onclick="toggleIt('#HELP_DESK','brz-class-help');">
+				    <img style="position:fixed;top:35px;width:22px;height:10px;" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/box-top-edge-w.png">
+				    <i id="brz-class-help" class="fa fa-question-circle brz-padding-right brz-large-min2 brz-text-shad brz-main-actiable brz-class-help" ></i>  
+		        
+					<div id="HELP_DESK" style="right:0;margin-top:6px;" class="brz-dropdown-content">
+		                <div style="width:200px;" class="brz-hide-small brz-hide-medium brz-round brz-right brz-small brz-hover-shadow brz-card-2 brz-text-left brz-white">     
+				            <div class="brz-container"><span class="brz-right brz-padding"><i class="fa fa-close brz-cursor-pointer brz-hover-text-black brz-text-super-grey" ></i></span><span class="brz-left brz-padding brz-text-black brz-text-bold">{$TEXT->_uni-Help_center}</span></div>
+                            <hr style="width:80%">
+				            <div class="brz-tiny-2 brz-padding brz-hover-blue-hd brz-hover-text-white brz-cursor-pointer" onclick="window.open('{$TEXT->installation}/browse/privacy');" ><i style="width:20px" class="fa fa-user-secret"></i> {$TEXT->_uni-Privacy_policy}</div>
+				            <div class="brz-tiny-2 brz-padding brz-hover-blue-hd brz-hover-text-white brz-cursor-pointer" onclick="window.open('{$TEXT->installation}/browse/developers');" ><i style="width:20px" class="fa fa-code"></i> {$TEXT->_uni-Developers}</div>
+				            <div class="brz-tiny-2 brz-padding brz-hover-blue-hd brz-hover-text-white brz-cursor-pointer" onclick="window.open('{$TEXT->installation}/browse/libs');" ><i style="width:20px" class="fa fa-file-code-o"></i> {$TEXT->_uni-Libraries}</div>
+				            <div class="brz-tiny-2 brz-padding brz-hover-blue-hd brz-hover-text-white brz-cursor-pointer" onclick="window.open('{$TEXT->installation}/browse/terms');" ><i style="width:20px" class="fa fa-file-o"></i> {$TEXT->_uni-Terms_and_conditions}</div>
+				            <div class="brz-tiny-2 brz-padding brz-hover-blue-hd brz-hover-text-white brz-cursor-pointer" onclick="window.open('{$TEXT->installation}/browse/welcome');" ><i style="width:20px" class="fa fa-folder-open-o"></i> {$TEXT->_uni-Browse}</div>
+                       </div> 
+				   
+                    </div>
+				
+				</span>	
+
+                <span title="{$TEXT->_uni-Navigate}" class="brz-cursor-pointer brz-dropdown-clicked brz-no-image brz-dropdown-clicked brz-hide-small brz-hide-medium">
+                    <span class="brz-cursor-pointer brz-no-image  brz-hide-small brz-hide-medium" onclick="toggleIt('#MY_DESK','brz-class-me');">
+				        <i id="brz-class-me" class="fa fa-caret-down brz-large-min brz-text-shad brz-main-actiable brz-class-me" ></i> 
+	                </span>	
+				    <div id="MY_DESK" class="brz-dropdown-content" style="right:0;margin-top:7px;">
+		                <div style="width:200px;" class="brz-hide-small brz-hide-medium brz-round brz-right brz-small brz-hover-shadow brz-card-2 brz-text-left brz-white">     
+				            <div class="brz-padding-8">
+					            <div style="padding:2px 30px;"class="brz-small brz-hover-blue-hd brz-hover-text-white brz-cursor-pointer" onclick="updateTopbar('brz-class-account');loadProfile({$TEXT->temp-user_id});updateNavigation('p');" >{$TEXT->temp-Name_navigation_14}</div>
+					            <div style="padding:2px 30px;"class="brz-small brz-hover-blue-hd brz-hover-text-white brz-cursor-pointer" onclick="updateTopbar('NULL');sidenav_close();loadChats(0,0,1);" >{$TEXT->_uni-Messenger}</div>
+                                <hr style="width:80%">
+					            <div style="padding:2px 30px;"class="brz-small brz-hover-blue-hd brz-hover-text-white brz-cursor-pointer" onclick="loadTrending(0,0,1);" >{$TEXT->_uni-Trending_now}</div>
+					            <hr style="width:80%">
+					            <div style="padding:2px 30px;"class="brz-small brz-hover-blue-hd brz-hover-text-white brz-cursor-pointer" onclick="updateTopbar('NULL');sidenav_close();getSettings(1);" >{$TEXT->_uni-Settings}</div>
+					            <div style="padding:2px 30px;"class="brz-small brz-hover-blue-hd brz-hover-text-white brz-cursor-pointer" onclick="updateTopbar('NULL');user_logOut();" >{$TEXT->_uni-Log_out}</div>
+                            </div> 			
+                        </div> 			
+                    </div>
+				</span>
+   
+		    </span>
+	    </div>
+	</div>
+</ul>
+
+<nav class="brz-sidenav brz-noselect brz-main-nav-side brz-collapse brz-animate-left" style="overflow:hidden" id="mySidenav">
+	
+	<div id="P_NAV_LEFT" class="brz-main-nav-marzin brz-nav-child" >
+	
+	<a id="brz-add-listner1-p" title="{$TEXT->temp-Name_navigation_title}" class="brz-small brz-padding brz-add-listner1 brz-cursor-point brz-hover-n_active_hover" onclick ="updateTopbar('brz-class-account');loadProfile({$TEXT->temp-user_id});updateNavigation('p');">
+		<img id="profile-avatar" src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-image}&fol=a&w=46&h=46" width="20" height="20" ></img>&nbsp; {$TEXT->temp-Name_navigation_30}
+	</a> 
+	
+	<!-- EXT_SLOT_NAV_1 -->
+	
+	<a id="brz-add-listner1-1" style="margin-top:6px !important;" title="{$TEXT->_uni-ttl_news_feeds_all}" class="brz-small brz-padding brz-add-listner1 brz-cursor-point brz-hover-n_active brz-hover-n_active_hover" onclick ="sidenav_close();loadHome();">
+		<img class="brz-img-news-feeds" alt="" src="{$TEXT->DATA-IMG-8}"></img>&nbsp; {$TEXT->_uni-News_feeds}
+	</a> 
+	
+    <a id="brz-add-listner1-2" style="margin-top:1px !important;" title="{$TEXT->_uni-ttl_notiications_history}" class="brz-small brz-hover-n_active_hover brz-padding brz-add-listner1 brz-cursor-point" onclick ="sidenav_close();loadNotifications();" >
+		<img class="brz-img-notifications" alt="" src="{$TEXT->DATA-IMG-8}"></img>&nbsp; {$TEXT->_uni-Notifications}
+	</a>
+	
+    <a id="brz-add-listner1-TREN" style="margin-top:1px !important;" title="{$TEXT->_uni-ttl_followers_ppl}" class="brz-small brz-hover-n_active_hover brz-padding brz-add-listner1 brz-cursor-point" onclick ="sidenav_close();loadTrending(0,0,1);" >
+		<img class="brz-img-trending-n" alt="" src="{$TEXT->DATA-IMG-8}"></img>&nbsp; {$TEXT->_uni-Trending}
+	</a>
+	
+	<a id="brz-add-listner1-GR" style="margin-top:1px !important;" title="{$TEXT->_uni-ttl_load_group_feeds}" class="brz-small brz-hover-n_active_hover brz-padding brz-add-listner1 brz-cursor-point" onclick ="sidenav_close();groupFeeds(0,0,1);" >
+		<img class="brz-img-groups" alt="" src="{$TEXT->DATA-IMG-8}"></img>&nbsp; {$TEXT->_uni-Groups}
+	</a>
+	
+    <a id="brz-add-listner1-PA" style="margin-top:1px !important;" title="{$TEXT->_uni-ttl_load_page_feeds}" class="brz-small brz-hover-n_active_hover brz-padding brz-add-listner1 brz-cursor-point" onclick ="sidenav_close();pageFeeds(0,0,1);" >
+		<img class="brz-img-pages-n" alt="" src="{$TEXT->DATA-IMG-8}"></img>&nbsp; {$TEXT->_uni-Pages}
+	</a>
+	
+	<a id="brz-add-listner1-6" style="margin-top:1px !important;" title="{$TEXT->_uni-Messenger}" class="brz-small brz-hover-n_active_hover brz-padding brz-add-listner1 brz-cursor-point" onclick ="sidenav_close();loadChats(0,0,1);" >
+		<img class="brz-img-chats" alt="" src="{$TEXT->DATA-IMG-8}"></img>&nbsp; {$TEXT->_uni-Messenger}
+	</a>
+	
+	<span style="margin-top:3px !important;" class="brz-tiny brz-text-bold brz-padding" >
+		{$TEXT->_uni-EXPLORE}
+	</span>
+	
+	<a id="brz-add-listner1-29" title="{$TEXT->_uni-ttl_profile_search}" style="margin-top:1px !important;padding: 3px 0px 3px 0px !important;" class="brz-small brz-hide-small brz-hover-n_active_hover brz-add-listner1 brz-cursor-point" onclick ="$('#w2rsdf').focus();updateNavigation('29');" >
+		<input id="w2rsdf" style="padding: 0px 0px 0px 30px !important;" class="brz-input brz-no-border search-icon input-icon brz-text-grey brz-small brz-card brz-transparent brz-hover-opacity brz-padding" placeholder="{$TEXT->_uni-ttl_profile_search}"></input>						
+	</a>
+	
+	<!-- EXT_SLOT_NAV_2 -->
+	
+    <a id="brz-add-listner1-PH" style="margin-top:1px !important;" title="}" class="brz-small brz-hover-n_active_hover brz-padding brz-add-listner1 brz-cursor-point" onclick ="sidenav_close();updateNavigation('PH');$('#swsef89u3hj89sd').val('{$TEXT->temp-username}');moveSearch(4);" >
+		<img class="brz-img-photos-n" alt="" src="{$TEXT->DATA-IMG-8}"></img>&nbsp; {$TEXT->_uni-Photos}
+	</a>
+	
+    <a id="brz-add-listner1-4" style="margin-top:1px !important;" title="{$TEXT->_uni-ttl_followers_ppl}" class="brz-small brz-hover-n_active_hover brz-padding brz-add-listner1 brz-cursor-point" onclick ="sidenav_close();loadRelatives(0);" >
+		<img class="brz-img-followers" alt="" src="{$TEXT->DATA-IMG-8}"></img>&nbsp; {$TEXT->_uni-Followers}
+	</a>
+	
+    <a id="brz-add-listner1-5" style="margin-top:1px !important;" title="{$TEXT->_uni-ttl_followings_ppl}" class="brz-small brz-hover-n_active_hover brz-padding brz-add-listner1 brz-cursor-point" onclick ="sidenav_close();loadRelatives(1);" >
+		<img class="brz-img-followings" alt="" src="{$TEXT->DATA-IMG-8}"></img>&nbsp; {$TEXT->_uni-Followings}
+	</a>
+	
+	<span style="margin-top:3px !important;" class="brz-tiny brz-text-bold brz-padding" >
+		{$TEXT->_uni-PROFILE}
+	</span>
+    <a id="brz-add-listner1-e" style="margin-top:1px !important;" title="{$TEXT->_uni-ttl_edit_profile}" class="brz-small brz-hover-n_active_hover brz-padding brz-add-listner1 brz-cursor-point" onclick="sidenav_close();getSettings(1)">
+		<img class="brz-img-settings" alt="" src="{$TEXT->DATA-IMG-8}"></img>&nbsp; {$TEXT->_uni-Edit}
+	</a>
+	
+    <!-- EXT_SLOT_NAV_3 -->
+	
+	<a id="user_logout_a" style="margin-top:1px !important;" title="{$TEXT->_uni-ttl_logout}" class="brz-small brz-hover-n_active_hover brz-padding brz-add-listner1 brz-cursor-point"  onclick="user_logOut();">
+		<img class="brz-img-log-out" alt="" src="{$TEXT->DATA-IMG-8}"></img>&nbsp; {$TEXT->_uni-Log_out}
+	</a>
+	
+	<span style="margin-top:3px !important;" class="brz-tiny brz-text-bold brz-padding" >
+		{$TEXT->_uni-CREATE}
+	</span>
+	
+	<!-- EXT_SLOT_NAV_4 -->
+	
+	<div class="brz-padding-left">
+	<span onclick="locate('{$TEXT->installation}/?new=page');" class="brz-text-blue-dark brz-small brz-underline-hover brz-cursor-pointer">{$TEXT->_uni-Page}</span> -
+	<span onclick="loadModal(1);loadGroup(0,14,32);" class="brz-text-blue-dark brz-small brz-underline-hover brz-cursor-pointer">{$TEXT->_uni-Group}</span>
+	</div>
+	<br><br><br>
+	</div>
+	
+	<div id="S_NAV_LEFT" class="brz-main-nav-marzin brz-nav-child brz-hide-small brz-hide-medium">
+	<br><br><br>
+	</div>	
+</nav>
+
+<div class="brz-overlay brz-hide-large brz-animate-opacity" onclick="sidenav_close()" style="cursor: pointer; display: none;" id="myOverlay"></div>
+
+<div id="languages" style="display:none;" class="brz-modal">
+	<div class="brz-modal-content2 brz-animate-zoom brz-clear brz-card-8" style="height:auto;">
+		<div class="brz-border brz-border-pink">
+			<div class="brz-pink-light brz-clear brz-padding brz-medium brz-text-bold brz-full">
+			    <span class="brz-left">{$TEXT->_uni-Languages}</span>
+			</div>
+			<div style="max-height:250px;overflow:auto;" class="brz-white nicescrollit brz-clear brz-padding brz-small brz-full">
+			    <span class="brz-left">{$TEXT->TEMP-available-languages}</span>
+			</div>
+			<div class="brz-super-grey brz-clear brz-border-top brz-padding brz-small brz-full">
+			    <div onclick="$('#languages').fadeOut();" class="brz-tag brz-blue brz-hover-blue-hd brz-padding brz-cursor-pointer brz-right brz-text-white brz-text-bold brz-small">{$TEXT->_uni-CLOSE}</div>
+			</div>
+		</div>	
+	</div>
+</div>

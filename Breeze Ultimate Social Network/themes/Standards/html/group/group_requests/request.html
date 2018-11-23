@@ -1,0 +1,31 @@
+<div id="{$TEXT->temp-unique_id}" class="brz-padding-nots brz-container brz-hover-xxlight-grey brz-border-bottom brz-border-super-grey">
+    <div class="brz-clear">
+        <div class="brz-left">
+            <img title="{$TEXT->temp-user_ttl}" onclick="aOverlow();s23u89dssh();loadProfile({$TEXT->temp-user_id});" src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-user_image}&fol=a&w=35&h=35" alt="..." class="brz-round brz-left brz-image-margin-right" width="35" height="35">
+        </div>
+        <div class="brz-right">
+            <div title="{$TEXT->_uni-Allow_this_user_to_join_group}" class="brz-round brz-padding-tiny2 brz-tag brz-blue brz-tiny-2 brz-hover-blue-hd brz-cursor-pointer brz-text-white brz-text-bold" onclick="groupRequests({$TEXT->temp-group_id},0,0,'{$TEXT->temp-user_id}','{$TEXT->temp-unique_id}',1)">
+		        {$TEXT->_uni-Confirm}
+		    </div>
+            <button title="{$TEXT->_uni-Remove_request}" class="brz-new_btn brz-round brz-padding-standard brz-text-bold brz-tiny-2 brz-text-grey" onclick="groupRequests({$TEXT->temp-group_id},0,0,'{$TEXT->temp-user_id}','{$TEXT->temp-unique_id}',0)">
+			    {$TEXT->_uni-Not_now}
+		    </button>
+        </div>
+        <div class="">
+            <div class="brz-small brz-no-overflow">
+                <div class="brz-line-o">
+				    <span title="{$TEXT->temp-user_ttl}" onclick="aOverlow();s23u89dssh();loadProfile({$TEXT->temp-user_id})" class="brz-text-bold brz-text-black brz-cursor-pointer brz-underline-hover">
+				        {$TEXT->temp-user_name_25}
+				    </span> 
+					{$TEXT->_uni-wants_to_join_group} 
+                </div>
+                <span class="">
+                    <img class="brz-img-not-add-member" alt="" src="{$TEXT->DATA-IMG-5}">
+                    <span title="{$TEXT->temp-time}" class="brz-line-o timeago brz-text-grey brz-opacity">
+                        {$TEXT->temp-time}
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

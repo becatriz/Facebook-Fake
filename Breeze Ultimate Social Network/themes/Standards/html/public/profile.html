@@ -1,0 +1,59 @@
+<div class="brz-display-container brz-new-container-3 brz-clear">
+<div class="brz-img-pre-loader-cover">
+<img '.$onclick[0].' id="profile_view_cover_'.$row['idu'].'" style="width:100%;min-height:130px!important;" class="brz-image brz-display-container brz-round brz-animate-opacity brz-align-center">
+<script>loadImage(\''.$TEXT['installation'].'/thumb.php?src='.$cover_photo.'&fol=b&w=1093&h=381&q=100\',\'#profile_view_cover_'.$row['idu'].'\');</script>
+'.$updateable.'
+</div>
+<div class="brz-display-bottomleft brz-profile-picture brz-margin brz-wide brz-text-light-grey brz-center">
+<img style="min-width:70px;min-height:70px;" '.$onclick[1].' id="profile_view_main_'.$row['idu'].'" src="'.$TEXT['installation'].'/thumb.php?src='.$profile_picture.'&fol=a&w=245&h=245&q=100" class="brz-left brz-display-container brz-border-bold brz-border-white brz-card-2 brz-profile-picture brz-round">
+</div>
+<span class="brz-responsive-xbig-styled brz-hide-medium brz-right brz-hide-large brz-text-white brz-text-bold" style="text-shadow: 0 0 2px rgba(0,0,0,.8);position:relative;right:20px;bottom:30px;font-family: Helvetica, Arial, sans-serif;" >
+&nbsp;'.$this->verifiedBatch($row['verified']).' '.fixName(25,$row['username'],$row['first_name'],$row['last_name']).'
+</span>
+<div class="brz-display-bottom brz-border-bottom brz-border-super-grey brz-super-grey brz-clear" style="width:100%;">
+<span class="brz-hide-medium brz-hide-large brz-display-bottomright brz-margin-cat">
+'.$followers_count1.'
+'.$photos_count1.'
+'.$posts_count1.'
+</span>
+<ul class="brz-navbar brz-large brz-super-grey brz-right">
+<li onclick="profileLoadTimeline('.$row['idu'].');" class="brz-hide-small brz-padding-8 brz-hvr-active brz-hvr-active-1 brz-text-grey"><a id="profile_view_tab_1" class="brz-element-profile-tab brz-responsive-new-styled" href="javascript:returnFalse();">'.$TEXT['_uni-Timeline'].'</a></li>
+<li onclick="profileLoadGallery('.$row['idu'].');" class="brz-hide-small brz-padding-8 brz-hvr-active brz-text-grey"><a id="profile_view_tab_2" class="brz-responsive-new-styled brz-element-profile-tab" href="javascript:returnFalse();">'.$TEXT['_uni-Photos'].'</a></li>
+<li onclick="profileLoadFollowers('.$row['idu'].',0,0);" class="brz-hide-small brz-hvr-active brz-padding-8 brz-text-grey"><a id="profile_view_tab_3" class="brz-responsive-new-styled brz-element-profile-tab" href="javascript:returnFalse();">'.$TEXT['_uni-Followers'].'</a></li>
+<li onclick="profileLoadFollowings('.$row['idu'].',0,1);" class="brz-hide-small brz-hvr-active brz-padding-8 brz-text-grey"><a id="profile_view_tab_4" class="brz-responsive-new-styled brz-element-profile-tab" href="javascript:returnFalse();">'.$TEXT['_uni-Followings'].'</a></li>
+<li onclick="profileLoadAbout('.$row['idu'].');" class="brz-hide-small brz-padding-8 brz-hvr-active brz-text-grey"><a id="profile_view_tab_5" class="brz-responsive-new-styled brz-element-profile-tab" href="javascript:returnFalse();">'.$TEXT['_uni-About'].'</a></li>     
+</ul>
+</div>    
+</div>
+<div class="brz-white brz-padding-8 brz-new-container-3 brz-clear brz-display-containe brz-padding brz-border-bottom brz-border-super-grey" >
+<span class="brz-responsive-xbig-styled brz-text-grey brz-hide-small" style="font-family: \'Raleway\', sans-serif;font-weight: 500!important;">&nbsp;'.$this->verifiedBatch($row['verified']).' '.fixName(25,$row['username'],$row['first_name'],$row['last_name']).'</span>
+<span class="brz-small brz-hide-small brz-margin-4">
+'.$followers_count2.'
+'.$photos_count2.'
+'.$posts_count2.'
+</span>
+<span class="brz-right brz-margin-4">
+'.$follow_btn.' '.$reporter.'
+<div class="brz-dropdown-click" onclick="$(\'#PROFILE_DROP_'.$row['idu'].'\').toggleClass(\'brz-show\');">
+<button class="brz-new_btn brz-round brz-padding-standard brz-text-bold brz-tiny-2 brz-text-grey">
+<img class="nav-item-text-inverse-big brz-img-dropit" alt="" src="'.$TEXT['DATA-IMG-2'].'">			
+</button>
+<div id="PROFILE_DROP_'.$row['idu'].'" class="brz-dropdown-content brz-trasnparent" style="right:0">  
+<div style="height:12px;">
+<img style="position:absolute;top:0px;right:7px;" class="brz-img-drop-down-cat" src="'.$TEXT['DATA-IMG-9'].'">
+</div>
+<div class="brz-white brz-border brz-padding-8 brz-card-2">
+'.$messageable.'
+<a onclick="profileLoadTimeline('.$row['idu'].');" class="brz-tiny-2 brz-hover-blue-hd brz-hover-text-white" javascript:returnFalse();>'.$TEXT['_uni-Timeline'].'</a>
+<a onclick="profileLoadGallery('.$row['idu'].');" class="brz-tiny-2 brz-hover-blue-hd brz-hover-text-white" javascript:returnFalse();>'.$TEXT['_uni-Gallery'].'</a>
+<a onclick="profileLoadFollowers('.$row['idu'].',0,0);" class="brz-tiny-2 brz-hover-blue-hd brz-hover-text-white" javascript:returnFalse();>'.$TEXT['_uni-Followers'].'</a>
+<a onclick="profileLoadFollowings('.$row['idu'].',0,1);" class="brz-tiny-2 brz-hover-blue-hd brz-hover-text-white" javascript:returnFalse();>'.$TEXT['_uni-Followings'].'</a>
+<a onclick="profileLoadAbout('.$row['idu'].');" class="brz-tiny-2 brz-hover-blue-hd brz-hover-text-white" javascript:returnFalse();>'.$TEXT['_uni-About'].'</a>
+'.$reporterable.'
+<hr style="margin:5px;">
+<a onclick="copyToClipboard(\''.$TEXT['installation'].'/'.$row['username'].''.'\',\''.$TEXT['_uni-Profile_URL_copied'].'\');javascript:void(0);" class="brz-tiny-2 brz-hover-blue-hd brz-hover-text-white" href="javascript:void(0);">'.$TEXT['_uni-Copy_URL_profile'].'</a>
+</div>
+</div>
+</div>
+</span>
+</div>

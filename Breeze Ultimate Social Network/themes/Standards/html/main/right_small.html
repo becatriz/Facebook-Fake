@@ -1,0 +1,26 @@
+<!-- Right small body 25% width -->
+<div id="right_content" class="brz-half-beta" style="margin-top:2px !important;">
+    {$TEXT->content}
+	
+	<div id="RIGHT_LANGUAGE" class="crackable">
+		<div class="brz-white brz-border brz-round brz-border-super-grey brz-new-container brz-padding-8">
+        	<div class="brz-padding">
+				<div class="brz-small brz-left brz-text-super-grey">{$TEXT->TEMP-active_lang}</div> 
+				<div class="brz-clear brz-no-overflow">
+					<button onclick="$('#languages').fadeIn();" class="brz-new_btn brz-act-it brz-round brz-padding-side-2 brz-text-bold brz-tiny-2 brz-text-grey brz-right">
+			    		<i class="fa fa-plus brz-text-super-grey"></i>
+					</button>
+			    </div>
+			</div>
+    	</div>
+		<div class="brz-opacity brz-margin brz-tiny-2">
+			<a href="{$TEXT->installation}/browse/privacy" target="_blank" class="brz-underline-hover">{$TEXT->_uni-Privacy}</a> - <a href="{$TEXT->installation}/browse/terms" class="brz-underline-hover" target="_blank">{$TEXT->_uni-terms_}</a> - <a href="{$TEXT->installation}/browse/developers" class="brz-underline-hover" target="_blank">{$TEXT->_uni-Developers}</a> - <a href="{$TEXT->installation}/browse/libs" class="brz-underline-hover" target="_blank">{$TEXT->_uni-Libraries}</a> <span style="display:inline-block;">&copy; {$TEXT->web_name}</span>
+		</div>
+		<br>
+		<div id="RIGHT_SCROLL_FINISH" class="brz-hide-small">
+	    </div>
+	</div>
+	<div id="RIGHT_FIXED" style="position:fixed;top:46px;">
+	</div>	
+</div>
+<script>addCrack();</script>

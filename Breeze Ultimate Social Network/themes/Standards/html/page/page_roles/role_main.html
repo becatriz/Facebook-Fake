@@ -1,0 +1,28 @@
+<div id="role-id-{$TEXT->temp-pid}" class="brz-padding-nots brz-white">
+    <div class="brz-clear">
+        <div style="min-width:50px;min-height:50px;" onclick="loadProfile({$TEXT->temp-user_id});" class="brz-left brz-image-margin-right brz-search-picture brz-cursor-pointer">
+            <img class="brz-border brz-border-super-grey" src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-user_image}&fol=a&w=90&h=90">
+        </div>
+        <span class="">
+            <div class="brz-search-padding">
+                <div class="brz-clear">
+                    <div class="brz-right brz-search-l-class">
+                        {$TEXT->temp-del_btn}
+                    </div>
+                    <div onclick="loadProfile({$TEXT->temp-user_id});" class="brz-text-ell brz-cursor-pointer brz-hvr-black-btn brz-text-bold brz-responsive-zbig-styled brz-text-black">
+                        <span>
+						    {$TEXT->temp-user_name_25}
+						</span>
+                        {$TEXT->temp-user_verified_batch}
+                    </div>
+                    <div class="brz-text-super-grey brz-tiny-3 brz-line-o">
+                        <div class="brz-text-black">{$TEXT->temp-add_role}</div>
+                        <div>{$TEXT->temp-add_dat1}</div>
+                        <div class="brz-hide-small">{$TEXT->temp-add_dat2}</div>
+                    </div>
+                </div>
+            </div>
+        </span>
+    </div>
+</div>
+<hr>

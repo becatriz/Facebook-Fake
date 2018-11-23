@@ -1,0 +1,18 @@
+<div class="brz-padding-16 brz-padding" style="margin-top:10px !important;">
+    <div class="brz-clear">
+    <div onclick="loadSettings(4)" class="brz-left brz-underline-hover brz-cursor-pointer brz-text-blue-dark brz-small">{$TEXT->_uni-Notifications_settings}</div>
+	</div>
+</div>
+<style>body{background:#fff !important;}</style>
+<div id="RIGHT_NOTIFICATIONS_TYPE" class="brz-new-container-trans brz-no-border brz-clear brz-padding">
+    <div>
+	    <div class="brz-left brz-text-bold brz-tiny-2 brz-full">{$TEXT->_uni-TYPE}</div><br>
+	    <div class="brz-left brz-full">
+			<div class="brz-full" onclick="sNX('1');scrollToTop();"><input checked type="radio" id="chat_radio1" name="radio_1" value="1" /><label class="brz-small" for="chat_radio1">{$TEXT->_uni-All}</label></div>
+			<div class="brz-full" onclick="sNX('0');scrollToTop();"><input type="radio" id="chat_radio2" name="radio_1" value="2" /><label class="brz-small" for="chat_radio2">{$TEXT->_uni-Unreaded}</label></div>
+			<div class="brz-full" onclick="sNX('2');scrollToTop();"><input type="radio" id="chat_radio3" name="radio_1" value="3" /><label class="brz-small" for="chat_radio3">{$TEXT->_uni-Requests}</label></div>
+			<div class="brz-full" onclick="sNX('3');scrollToTop();"><input type="radio" id="chat_radio4" name="radio_1" value="4" /><label class="brz-small" for="chat_radio4">{$TEXT->_uni-Followers}</label></div>
+		</div>
+
+    </div>
+</div>

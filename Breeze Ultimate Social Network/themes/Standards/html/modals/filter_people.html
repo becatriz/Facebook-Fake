@@ -1,0 +1,74 @@
+<style>.dots-icon {background-image: url('{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/dots.png');</style>
+<div id="RIGHT_PEOPLE_HOME" class="brz-new-container-trans brz-clear brz-padding">
+    <div>
+	    <div class="brz-left brz-text-bold brz-tiny-2" style="width:100%;">{$TEXT->_uni-HOMETOWN}</div>
+	    <div class="brz-left" style="width:60%">
+			<div class="brz-hover-new_clr" onclick="search(0,25,1);scrollToTop();"><input type="radio" id="filter-people-home-1" class="add-home-old" name="filter-people-home" value="" checked /><label class="brz-small" for="filter-people-home-1">{$TEXT->_uni-Anycity}</label></div>		
+			<div class="brz-hover-new_clr brz-clear" id="add-home-keys-root">
+			    <div class="brz-small brz-clear brz-cursor-pointer brz-padding-neo">
+			        <input id="add-home-keys" style="padding: 0px 0px 0px 30px !important;" class="brz-input brz-clear brz-no-border dots-icon input-icon brz-text-grey brz-small brz-card brz-transparent brz-hover-opacity brz-padding" placeholder="{$TEXT->_uni-ad_key}"></input>
+			        <button style="display:none;" class="brz-new_btn brz-round brz-padding-standard brz-right brz-text-bold brz-tiny-2 brz-text-grey" onclick="addKeys('home',1);">
+					<img class="nav-item-text-inverse-big brz-img-add" alt="" src="{$TEXT->DATA-IMG-7}"> {$TEXT->_uni-Add}</button>
+			    </div>
+			</div>
+		</div>
+    </div>
+</div>
+
+<div id="RIGHT_PEOPLE_LIV" class="brz-new-container-trans brz-clear brz-padding">
+    <div>
+	    <div class="brz-left brz-text-bold brz-tiny-2" style="width:100%;">{$TEXT->_uni-LIVING}</div>
+	    <div class="brz-left" style="width:60%">
+			<div class="brz-hover-new_clr" onclick="search(0,25,1);scrollToTop();"><input type="radio" id="filter-people-liv-1" name="filter-people-liv" value="" checked /><label class="brz-small" for="filter-people-liv-1">{$TEXT->_uni-Anycity}</label></div>	
+		    <div class="brz-hover-new_clr brz-clear" id="add-liv-keys-root">
+			    <div class="brz-small brz-clear brz-cursor-pointer brz-padding-neo">
+			        <input id="add-liv-keys" style="padding: 0px 0px 0px 30px !important;" class="brz-input brz-clear brz-no-border dots-icon input-icon brz-text-grey brz-small brz-card brz-transparent brz-hover-opacity brz-padding" placeholder="{$TEXT->_uni-ad_key}"></input>
+			        <button style="display:none;" class="brz-new_btn brz-round brz-padding-standard brz-right brz-text-bold brz-tiny-2 brz-text-grey" onclick="addKeys('liv',1);">
+					<img class="nav-item-text-inverse-big brz-img-add" alt="" src="{$TEXT->DATA-IMG-7}"> {$TEXT->_uni-Add}</button>
+			    </div>
+			</div>
+		</div>
+    </div>
+</div>
+
+<div id="RIGHT_PEOPLE_EDU" class="brz-new-container-trans brz-clear brz-padding">
+    <div>
+	    <div class="brz-left brz-text-bold brz-tiny-2" style="width:100%;">{$TEXT->_uni-EDU}</div>
+	    <div class="brz-left" style="width:60%">
+			<div class="brz-hover-new_clr" onclick="search(0,25,1);scrollToTop();"><input type="radio" id="filter-people-edu-1" name="filter-people-edu" value="" checked /><label class="brz-small" for="filter-people-edu-1">{$TEXT->_uni-Anyedu}</label></div>  
+			<div class="brz-hover-new_clr brz-clear" id="add-edu-keys-root">
+			    <div class="brz-small brz-clear brz-cursor-pointer brz-padding-neo">
+			        <input id="add-edu-keys" style="padding: 0px 0px 0px 30px !important;" class="brz-input brz-clear brz-no-border dots-icon input-icon brz-text-grey brz-small brz-card brz-transparent brz-hover-opacity brz-padding" placeholder="{$TEXT->_uni-ad_key}"></input>
+			        <button style="display:none;" class="brz-new_btn brz-round brz-padding-standard brz-right brz-text-bold brz-tiny-2 brz-text-grey" onclick="addKeys('edu',1);">
+					<img class="nav-item-text-inverse-big brz-img-add" alt="" src="{$TEXT->DATA-IMG-7}"> {$TEXT->_uni-Add}</button>
+			    </div>
+			</div>
+		</div>
+    </div>
+</div>
+
+<div id="RIGHT_PEOPLE_PROFF" class="brz-new-container-trans brz-clear brz-padding">
+    <div>
+	    <div class="brz-left brz-text-bold brz-tiny-2" style="width:100%;">{$TEXT->_uni-PROFF}</div>
+	    <div class="brz-left" style="width:60%">
+			<div class="brz-hover-new_clr" onclick="search(0,25,1);scrollToTop();"><input type="radio" id="filter-people-prof-1" name="filter-people-prof" value="" checked /><label class="brz-small" for="filter-people-prof-1">{$TEXT->_uni-Anyprof}</label></div>  
+			<div class="brz-hover-new_clr brz-clear" id="add-prof-keys-root">
+			    <div class="brz-small brz-clear brz-cursor-pointer brz-padding-neo">
+			        <input id="add-prof-keys" style="padding: 0px 0px 0px 30px !important;" class="brz-input brz-clear brz-no-border dots-icon input-icon brz-text-grey brz-small brz-card brz-transparent brz-hover-opacity brz-padding" placeholder="{$TEXT->_uni-ad_key}"></input>
+			        <button style="display:none;" class="brz-new_btn brz-round brz-padding-standard brz-right brz-text-bold brz-tiny-2 brz-text-grey" onclick="addKeys('prof',1);">
+					<img class="nav-item-text-inverse-big brz-img-add" alt="" src="{$TEXT->DATA-IMG-7}"> {$TEXT->_uni-Add}</button>
+			    </div>
+			</div>
+		</div>
+    </div>
+</div>
+<script>
+// Allow addin dynamic filters
+$(document).ready(function() {   
+	$(document).on('keyup', '#add-home-keys', function() { getKeys('home'); });
+	$(document).on('keyup', '#add-liv-keys',  function() { getKeys('liv');  });
+	$(document).on('keyup', '#add-edu-keys',  function() { getKeys('edu');  });
+	$(document).on('keyup', '#add-prof-keys', function() { getKeys('prof'); });
+});
+
+</script>

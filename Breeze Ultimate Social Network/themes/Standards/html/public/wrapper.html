@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6 ie"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7 ie"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8 ie"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9 ie"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class=""> <!--<![endif]-->
+ 
+<head>
+
+<!-- Set META DATA -->
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+<!-- Attach FAVICON -->
+<link rel="apple-touch-icon" sizes="57x57" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Website title -->
+<title>{$TEXT->title}</title>
+
+<!-- EXT_SLOT_SHEET_1 -->
+
+<!-- Import CSS sheets -->
+<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/W3.css{$TEXT->REFRESH_CODE}">
+<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/theme.css{$TEXT->REFRESH_CODE}">
+<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/welcome.css{$TEXT->REFRESH_CODE}">
+<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/font-awesome.css">
+<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/jquery.fs.picker.min.css">
+<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/slick.css">
+<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/slick-theme.css">
+<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/CSS-sprites.css{$TEXT->REFRESH_CODE}">
+
+<!-- EXT_SLOT_SHEET_2 -->
+
+<!-- Import important language strings for later use -->
+<script>
+function importLang() {
+    return lang = ["{$TEXT->_uni-You_and}", "{$TEXT->_uni-You_liked_this}"
+	               ,"{$TEXT->_uni-Like}", 
+				   "{$TEXT->_uni-Liked}", 
+				   "{$TEXT->_uni-read_more}", 
+				   "{$TEXT->_uni-show_less}",
+				   "{$TEXT->_uni-Profile_URL_copied}",
+				   "{$TEXT->_uni-Save_changes}",
+				   "{$TEXT->DATA-IMG-7}",
+				   "{$TEXT->DATA-IMG-5}"
+				   ];
+}
+var seconds = "{$TEXT->_uni_time-seconds}",a_minute = "{$TEXT->_uni_time-a_minute}",minutes = "%d {$TEXT->_uni_time-minutes}",
+an_hour = "{$TEXT->_uni_time-an_hour}",hours = "%d {$TEXT->_uni_time-hours}",a_day = "{$TEXT->_uni_time-a_day}",
+days = "%d {$TEXT->_uni_time-days}",a_month = "{$TEXT->_uni_time-a_month}",months = "%d {$TEXT->_uni_time-months}",
+a_year = "{$TEXT->_uni_time-a_year}",years = "%d {$TEXT->_uni_time-years}";
+</script>
+
+<!-- EXT_SLOT_JS_1 -->
+
+<!-- Import main open source projects -->
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.js"></script>
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.placeholder.js"></script>
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.timeago.js"></script>
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/nice-select.js"></script>
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.fs.picker.min.js"></script>
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.nicescroll.js"></script>
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.slick.js"></script>
+
+<!-- EXT_SLOT_JS_2 -->
+
+<!-- Import Navigation -->
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/navigation.js{$TEXT->REFRESH_CODE}"></script>
+<!-- Import Main script -->
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/feeds.js{$TEXT->REFRESH_CODE}"></script>
+
+<!-- Installation URl-->
+<script type="text/javascript">var installation = '{$TEXT->installation}';var theme = '{$TEXT->theme}';</script>
+
+
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/public.js{$TEXT->REFRESH_CODE}"></script>
+<!-- Import Emoji script -->
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/emoji.js{$TEXT->REFRESH_CODE}"></script>
+
+<!-- EXT_SLOT_JS_3 -->
+
+<!-- Apply font  -->
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Helvetica", Arial, sans-serif;text-overflow: ellipsis;}
+.brz-img-pre-loader{margin-top:5px;min-width:100%;min-height:20px;background:url('{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/loader-small.gif') no-repeat center center;}
+.brz-img-pre-loader-cover{margin-top:5px;min-width:100%;min-height:130px;background:url('{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/loader-small.gif') no-repeat center center;}
+.search-icon{background-image:url('{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/img_search.png')}
+.search-icon-loading{background-image:url('{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/search_loader.gif')}
+.attending-icon{background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="30"><text x="5" y="17" style="font: bold 12px Arial;">{$TEXT->_uni-Attending} ...</text></svg>') no-repeat;font: 12px "Arial";}
+.celebrating-icon{background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="30"><text x="5" y="17" style="font: bold 12px Arial;">{$TEXT->_uni-Celebrating} ...</text></svg>') no-repeat;font: 12px "Arial";}
+.listening-icon{background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="30"><text x="5" y="17" style="font: bold 12px Arial;">{$TEXT->_uni-Listening} ...</text></svg>') no-repeat;font: 12px "Arial";}
+.looking-for-icon{background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="30"><text x="5" y="17" style="font: bold 12px Arial;">{$TEXT->_uni-Looking-for} ...</text></svg>') no-repeat;font: 12px "Arial";}
+.managing-icon{background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="30"><text x="5" y="17" style="font: bold 12px Arial;">{$TEXT->_uni-Managing} ...</text></svg>') no-repeat;font: 12px "Arial";}
+.meeting-icon{background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="30"><text x="5" y="17" style="font: bold 12px Arial;">{$TEXT->_uni-Meeting} ...</text></svg>') no-repeat;font: 12px "Arial";}
+.reading-icon{background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="30"><text x="5" y="17" style="font: bold 12px Arial;">{$TEXT->_uni-Reading} ...</text></svg>') no-repeat;font: 12px "Arial";}
+.thinking-about-icon{background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="30"><text x="5" y="17" style="font: bold 12px Arial;">{$TEXT->_uni-Thinking-about} ...</text></svg>') no-repeat;font: 12px "Arial";}
+.checked-in-icon{background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="30"><text x="5" y="17" style="font: bold 12px Arial;">{$TEXT->_uni-At} ...</text></svg>') no-repeat;font: 12px "Arial";}
+.traveling-icon{background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="30"><text x="5" y="17" style="font: bold 12px Arial;">{$TEXT->_uni-Traveling_to} ...</text></svg>') no-repeat;font: 12px "Arial";}
+.feeling-icon{background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="30"><text x="5" y="17" style="font: bold 12px Arial;">{$TEXT->_uni-Feeling} ...</text></svg>') no-repeat;font: 12px "Arial";}
+.watching-icon{background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="30"><text x="5" y="17" style="font: bold 12px Arial;">{$TEXT->_uni-Watching} ...</text></svg>') no-repeat;font: 12px "Arial";}
+.playing-icon{background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="30"><text x="5" y="17" style="font: bold 12px Arial;">{$TEXT->_uni-Playing} ...</text></svg>') no-repeat;font: 12px "Arial";}
+.add-celebrating-icon{background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="30"><text x="5" y="17" style="font: bold 12px Arial;">{$TEXT->_uni-Celebrating} ...</text></svg>') no-repeat;font: 12px "Arial";}
+.add-saving-icon{background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="30"><text x="5" y="17" style="font: bold 12px Arial;">{$TEXT->_uni-Saving} ...</text></svg>') no-repeat;font: 12px "Arial";}
+</style>
+<!-- Set view port -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+<!-- VIA PHP -->
+{$TEXT->page_navigation}
+
+<div class="centered-body" id="body-center">
+
+<div id="body-start"></div>
+
+<!-- Mark down -->
+<div class="brz-clear"></div>
+
+<!-- Installation URl-->	
+<input id="installation_select" class="hidden" value="{$TEXT->installation}"></input>
+
+<!-- Active theme directory-->
+<input id="theme_select" class="hidden" value="{$TEXT->theme}"></input>
+
+<!-- Clipboard -->
+<input id="clipboard" class="hidden" value=""></input>
+
+<!-- To execute AJAX JS responses  -->
+<span id="execute_responses" name="execute_responses"></span>
+
+<!-- Languages -->		 
+<div id="languages" style="display:none;" class="brz-modal">
+	<div class="brz-modal-content2 brz-animate-zoom brz-clear brz-card-8" style="height:auto;">
+		<div class="brz-border brz-border-pink">
+			<div class="brz-pink-light brz-clear brz-padding brz-medium brz-text-bold brz-full">
+			    <span class="brz-left">{$TEXT->_uni-Languages}</span>
+			</div>
+			<div style="max-height:200px;overflow:auto;" class="brz-white nicescrollit brz-clear brz-padding brz-small brz-full">
+			    <span class="brz-left">{$TEXT->TEMP-available-languages}</span>
+			</div>
+			<div class="brz-super-grey brz-clear brz-border-top brz-padding brz-small brz-full">
+			    <div onclick="$('#languages').fadeOut();" class="brz-tag brz-padding brz-pink-light brz-cursor-pointer brz-right brz-text-white brz-text-bold brz-small">{$TEXT->_uni-CLOSE}</div>
+			</div>
+		</div>	
+	</div>
+</div>
+
+<!-- Generates through PHP-->
+<div id="body_all" style="margin-top:78px;" class="brz-900 centered-body" >
+
+    <div class="brz-clear brz-full">
+        <div id="attach-response" class="brz-right brz-margin-mossb"></div>
+    </div>
+	
+<div class="brz-clear">
+
+    {$TEXT->page_mainbody}
+	
+    <div class="brz-clear">
+	
+        <!-- Left body 75% width -->
+        <div id="threequarter" class="brz-twothird" style="margin-top:2px !important;" >
+    
+		    {$TEXT->left_content}
+	
+	        <br class="brz-hide-small">
+            <br class="brz-hide-small">
+            <br class="brz-hide-small">
+        </div>
+	
+	    <!-- Right small body 25% width -->
+	    <div id="right_content" class="brz-rest" style="margin-top:2px !important;">
+    	
+		    {$TEXT->right_content}
+	
+		    <div id="RIGHT_LANGUAGE" class="crackable">
+			    <div class="brz-white brz-border brz-round brz-border-super-grey brz-new-container brz-padding-8">
+        		    <div class="brz-padding">
+					    <div class="brz-small brz-left brz-text-super-grey">{$TEXT->TEMP-active_lang}</div> 
+					    <div class="brz-clear brz-no-overflow">
+						    <button onclick="$('#languages').fadeIn();" class="brz-new_btn brz-act-it brz-round brz-padding-side-2 brz-text-bold brz-tiny-2 brz-text-grey brz-right">
+			    			    <i class="fa fa-plus brz-text-super-grey"></i>
+						    </button>
+			    	    </div>
+				    </div>
+    		    </div>
+			    <div class="brz-opacity brz-margin brz-tiny-2">
+				    <a href="{$TEXT->installation}/browse/privacy" target="_blank" class="brz-underline-hover">{$TEXT->_uni-Privacy}</a> - <a href="{$TEXT->installation}/browse/terms" class="brz-underline-hover" target="_blank">{$TEXT->_uni-terms_}</a> - <a href="{$TEXT->installation}/browse/developers" class="brz-underline-hover" target="_blank">{$TEXT->_uni-Developers}</a> - <a href="{$TEXT->installation}/browse/libs" class="brz-underline-hover" target="_blank">{$TEXT->_uni-Libraries}</a> <span style="display:inline-block;">&copy; {$TEXT->web_name}</span>
+			    </div>
+			    <br>
+			    <div id="RIGHT_SCROLL_FINISH" class="brz-hide-small">
+	    	    </div>
+		    </div>
+		    <div id="RIGHT_FIXED" style="position:fixed;top:46px;">
+		    </div>	
+	    </div>
+	    <script>addCrack();</script>
+		
+    </div>
+		   
+	<div id="new-modal" style="display:none;" class="brz-modal">
+		
+		<!-- Modal content -->
+		<div id="new-modal-content" class="brz-modal-content3 brz-white brz-card-8 brz-round" style="height:auto;">
+		    
+
+		</div> 
+	</div>
+
+</div>
+
+</div>
+
+
+<script>
+// Reload placeholder plugin For IE9
+$('input, textarea').placeholder({customClass:'my-placeholder'});
+</script>
+</div>
+</body>
+</html>

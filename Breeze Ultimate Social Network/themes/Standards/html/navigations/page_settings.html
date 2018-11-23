@@ -1,0 +1,14 @@
+<div class="brz-new-container crackable">
+    <div id="PAGE_NAV_SETTINGS" class="brz-white brz-medium">
+        <div id="PAGE_NAV_SETTINGS_1" class="brz-padding-8 brz-padding brz-border-top-1 brz-hover-xlight-grey brz-text-bold brz-cursor-pointer" onclick="updatePageSNav(1);loadPage({$TEXT->TEMP_PAGE_ID},8,5,1);scrollToTop();" ><i class="fa fa-cog brz-text-body-it"></i> {$TEXT->_uni-General}</div>
+        <div id="PAGE_NAV_SETTINGS_2" class="brz-padding-8 brz-padding brz-border-top-1 brz-hover-xlight-grey brz-cursor-pointer" onclick="updatePageSNav(2);loadPage({$TEXT->TEMP_PAGE_ID},11,5,2,0);scrollToTop();" ><i class="fa fa-check-circle brz-text-body-it"></i> {$TEXT->_uni-Page_roles}</div>
+        <div id="PAGE_NAV_SETTINGS_3" class="brz-padding-8 brz-padding brz-border-top-1 brz-hover-xlight-grey brz-cursor-pointer" onclick="updatePageSNav(3);loadPage({$TEXT->TEMP_PAGE_ID},8,5,3);scrollToTop();" ><i class="fa fa-tag brz-text-body-it"></i> {$TEXT->_uni-Page_username}</div>
+        <div id="PAGE_NAV_SETTINGS_4" class="brz-padding-8 brz-padding brz-border-top-1 brz-hover-xlight-grey brz-cursor-pointer" onclick="updatePageSNav(4);loadPage({$TEXT->TEMP_PAGE_ID},8,5,4);scrollToTop();" ><i class="fa fa-user-plus brz-text-body-it"></i> {$TEXT->_uni-Add_role}</div>
+        <div id="PAGE_NAV_SETTINGS_5" class="brz-padding-8 brz-padding brz-border-top-1 brz-hover-xlight-grey brz-cursor-pointer" onclick="updatePageSNav(5);pageLog({$TEXT->TEMP_PAGE_ID},0,5);scrollToTop();" ><i class="fa fa-flag brz-text-body-it"></i> {$TEXT->_uni-Activity_log}</div>
+    </div>
+</div>
+<script>
+function updatePageSNav(id) {
+	$("#PAGE_NAV_SETTINGS_"+id).addClass("brz-text-bold").siblings().removeClass("brz-text-bold");
+}
+</script>	

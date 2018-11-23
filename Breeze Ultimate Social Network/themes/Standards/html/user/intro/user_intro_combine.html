@@ -1,0 +1,29 @@
+<div id="profile_about_c{$TEXT->temp-user_id}" style="overflow:hidden !important;border: 1px #e5e6e9 solid;" class="brz-new-container brz-dettachable brz-detach-to-threequarter brz-padding-8">
+    <div class="brz-padding">
+        <img class="brz-img-intro" alt="" src="{$TEXT->DATA-IMG-1}"><span class="brz-text-blue-dark">{$TEXT->_uni-Intro}</span>
+    </div>
+
+    <div id="profile_about_m{$TEXT->temp-user_id}" class="brz-desc-padding brz-clear brz-tiny-2 brz-center">
+	    {$TEXT->temp-user_bio}
+	</div>
+	
+    {$TEXT->temp-add_seprator}
+	
+    <div id="profile_about_m{$TEXT->temp-user_id}_2">
+        {$TEXT->temp-add_user_profession}
+        {$TEXT->temp-add_user_education}
+        {$TEXT->temp-add_user_relation}
+        {$TEXT->temp-add_user_interests}
+        {$TEXT->temp-add_user_gender}
+        {$TEXT->temp-add_user_birthday}
+        {$TEXT->temp-add_user_hometown}
+        {$TEXT->temp-add_user_city}
+        {$TEXT->temp-add_user_website}
+    </div>
+</div>
+<script>
+    sizeElements();
+    if($('#profile_about_m{$TEXT->temp-user_id}').is(':empty') && $('#profile_about_m{$TEXT->temp-user_id}'+'_2').is(':empty')) {
+	    $('#profile_about_c{$TEXT->temp-user_id}').remove();
+	}
+</script>

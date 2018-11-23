@@ -1,0 +1,54 @@
+<!-- Navbar -->
+<div  class="brz-top brz-blue-hd brz-large" style="z-index:3;">
+  <ul class="brz-navbar brz-welome-tab brz-card-2"  style="border-radius: 0px !important;">
+	
+	<div class="brz-welome-padd-in centerit brz-1400 brz-clear">
+	    
+		<div class="brz-left brz-clear">
+			<div class="brz-padding-8 brz-padding">
+				<img id="PRELOD_IT" onclick="locate('{$TEXT->installation}');" class="brz-welome-padd-in-logo2 brz-add-preloader" alt="" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/brz-ultimate2.png" >
+				<img onclick="locate('{$TEXT->installation}');" class="brz-welome-padd-in-logo" alt="" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/brz-ultimate3.png" >
+			</div>
+		</div>
+		
+		<div class="brz-hide-small">
+			<div class="brz-clear brz-no-overflow brz-padding" >   
+
+				<table style="width:350px;" role="presentation" class="brz-small brz-right" cellspacing="0">
+					<tbody>
+					<form class="brz-container" onsubmit="return submitLogin(event,1);">
+					<tr>
+						<td>
+							<label class="brz-welcome-font">{$TEXT->_uni-enter_email}</label>
+						</td>
+						<td>
+							<label class="brz-welcome-font">{$TEXT->_uni-Password}</label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input id="login-name-dr" class="brz-border brz-text-grey brz-small brz-welcome-input" value="">
+						</td>
+						<td>
+							<input id="login-pass-dr" class="brz-border brz-text-grey brz-small brz-welcome-input" value="" type="password">
+						</td>
+						<td>
+							<button type="submit" class="brz-padding-tiny2 brz-btn-round2 brz-tag brz-blue brz-tiny brz-hover-blue-hd brz-cursor-pointer brz-text-white brz-log-in-welkcome brz-text-bold">{$TEXT->_uni-LOG_IN}</button>
+						</td>
+					</tr>
+					<tr>
+						<td class="login_form_label_field"></td>
+						<td class="login_form_label_field">
+							<div>
+								<span onclick="locate('{$TEXT->installation}');" class="brz-small brz-cursor-pointer brz-opacity brz-underline-hover" >{$TEXT->_uni-Forgotten_password_}</span>
+							</div>
+						</td>
+					</tr>
+					</form>
+					</tbody>
+				</table>
+	        </div>
+		</div>	
+	</div>
+  </ul>
+</div>

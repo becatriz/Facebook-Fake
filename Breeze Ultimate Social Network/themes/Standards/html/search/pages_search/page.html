@@ -1,0 +1,30 @@
+<div id="page_{$TEXT->temp-page_id}" class="brz-padding-nots brz-white">
+    <div class="brz-clear">
+        <div style="min-width:50px;min-height:50px;" onclick="loadPage({$TEXT->temp-page_id},1,1);" class="brz-left brz-image-margin-right brz-search-picture brz-cursor-pointer">
+            <img class="brz-border brz-border-super-grey" src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-page_icon}&fol=pa&w=90&h=90">
+        </div>
+        <span class="">
+            <div class="brz-search-padding">
+                <div class="brz-clear">
+                    <div onclick="loadPage({$TEXT->temp-page_id},1,1);" class="brz-text-ell brz-cursor-pointer brz-hvr-black-btn brz-text-bold brz-responsive-zbig-styled brz-text-black">
+                        <span>
+						    {$TEXT->temp-page_name_25}
+						</span>
+                        {$TEXT->temp-verified_batch}
+                    </div>
+                    <div class="brz-text-super-grey brz-tiny-3 brz-line-o">
+                        <div class="brz-text-blue-dark">
+						    {$TEXT->temp-page_category} 
+						    <span class="brz-tiny">-</span>
+						    {$TEXT->temp-page_likes}
+						</div>
+                        <div></div>
+                        <div class="brz-hide-small">
+						    {$TEXT->temp-page_description}
+						</div>
+                    </div>
+                </div>
+            </div>
+        </span>
+    </div>
+</div><hr>

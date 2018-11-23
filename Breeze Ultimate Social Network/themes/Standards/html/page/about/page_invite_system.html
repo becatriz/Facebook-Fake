@@ -1,0 +1,48 @@
+<div class="brz-new-container brz-white brz-padding-8">
+	<div class="brz-opacity brz-tiny brz-text-grey brz-padding brz-text-bold">
+		{$TEXT->_uni-INVITE_FRIENDS}
+	</div>
+	<div class="brz-padding brz-tiny-2" style="width:100%;overflow:hidden">
+		<table style="width:100%;" role="presentation" class="brz-small" cellspacing="0">
+			<tbody>
+				<script>
+					
+					function searchGroupForMembers() {
+						
+						$("#grp_sb_sr").html('<div class="brz-center"><img class="brz-center" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/loader-small.gif"></img></div>');						
+						clearTimeout(typingTimer);						
+						
+						if ($('#grp_sb_sr-input').val()) {
+							typingTimer = setTimeout(function() {ajaxProtocol(load_page_file,{$TEXT->temp-page_id},'SUGGESTIONS',0,$("#grp_sb_sr-input").val(),0,0,0,0,0,0,0,0,"#grp_sb_sr",3,0,1,13);}, typingInterval);
+						} else {
+							$("#grp_sb_sr").html("");
+						}
+						
+					}
+					
+					var typingTimer;
+					var typingInterval = 1000;
+					$(document).on('keyup', '#grp_sb_sr-input', function(event) { searchGroupForMembers()});
+					
+				</script>
+				<tr> 
+					<td style="width:auto">
+						<input placeholder="{$TEXT->_uni-Add_members_ttl}" id="grp_sb_sr-input" value="" class="brz-border brz-text-grey brz-full brz-small brz-welcome-input">
+					</td>
+					<td style="width:11%">
+						<button onclick="searchGroupForMembers();" style="height:25px !important;" type="submit" class="brz-new_btn brz-show-edit-cancel brz-cursor-pointer brz-round brz-padding-neo2 brz-text-bold brz-small brz-text-grey">
+							<img src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/img_search.png" class="nav-item-text-inverse-big" width="14px">
+						</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<div id="grp_sb_sr" class="brz-padding-8">
+		</div>	
+		
+	</div>
+
+	{$TEXT->temp-add_suggestions}
+
+</div>

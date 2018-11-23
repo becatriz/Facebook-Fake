@@ -1,0 +1,187 @@
+<style>
+.search-icon{background-image:url('{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/img_search.png')}
+.brz-sidenav a:hover{background-color: rgb(0,0,0,0) !important;}
+</style>
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/Chart.bundle.min.js"></script> 
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/manage.js"></script> 
+
+<ul class="brz-navbar brz-pink-hd-2 brz-text-grey brz-top brz-left-align brz-medium" style="border-radius:0px !important;height:43px !important;">    
+
+	<div class="brz-clear brz-1400 brz-container">
+	
+	<span class="brz-padding brz-hide-large brz-opennav brz-left brz-no-image" onclick="toggle_side_nav();" style="margin-top:4px;">
+        <i style="margin-right:20px;" class="fa fa-bars brz-large fa-fw brz-text-shad brz-main-actiable brz-nav-opener"></i>
+    </span>
+    <a class="brz-hide-small brz-hide-medium brz-left brz-padding" href="{$TEXT->installation}">
+		<img  style="margin:3px 0px auto 20px;width:27.5px;height:27px;" alt="{$TEXT->web_name}" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/brz.png">
+	</a>	
+
+    <span class="brz-left" style="margin:9px 10px auto 0px;"> 
+		<input id="w2rsdf" autocomplete="off" class="swsef89u3hj89sd admin-search brz-serch-main brz-left swsef89u3hj89sd brz-input brz-animate-input brz-hover-white brz-text-grey brz-small input-icon search-icon" placeholder="{$TEXT->_uni-Search_user}" type="search"></input>
+	</span>	
+		
+	<div class="brz-margin-w brz-text-shad">
+		
+        <span class="brz-right" style="margin:8px 10px 10px 10px;">		
+
+			<span title="{$TEXT->_uni-Home}" class="brz-cursor-pointer" onclick="sidenav_close();loadStats();">
+			    <i class="fa brz-padding-right fa-home brz-large brz-text-white brz-main-actiable brz-class-stats"></i>
+			</span>	
+
+			<span title="{$TEXT->_uni-Manage_reports}" class="brz-cursor-pointer brz-no-image" onclick="sidenav_close();loadReports(0,1,1);">
+			    <i class="fa brz-padding-right fa-flag brz-large brz-text-white brz-main-actiable brz-class-reports" ></i>
+			</span>	
+
+			<span title="{$TEXT->_uni-Website_settings}" class="brz-cursor-pointer brz-hide-small brz-no-image" onclick="sidenav_close();loadWebSettings();">
+			    <i class="fa brz-padding-right fa-cog brz-large brz-text-white brz-main-actiable brz-class-websettings" ></i>
+			</span>
+
+			<span title="{$TEXT->_uni-Manage_users}" class="brz-cursor-pointer brz-no-image" onclick="manageUsers(0,0,1);">
+			    <i class="fa fa-users brz-large brz-text-white brz-main-actiable brz-class-users"></i>
+			</span>								    
+			
+		</span>	
+	</div>
+
+    </div>
+</ul>
+
+<nav class="brz-sidenav brz-collapse brz-main-nav-side brz-animate-left brz-parent-nav" id="mySidenav"><br>
+	<div class="brz-main-nav-marzin">
+	
+	    <div style="margin-top:3px !important;" onclick="toggleAdminCates('EXP_CONTAINER');" class="brz-small brz-text-blue-grey brz-cursor-pointer brz-leftbar brz-border-blue-grey brz-text-bold brz-padding" >
+			{$TEXT->_uni-EXPLORE}
+		</div>
+		
+		<div id="EXP_CONTAINER" class="brz-admin-cat" >
+				
+			<a id="brz-add-listner1-1" onclick ="sidenav_close();loadStats();" class="brz-small brz-padding brz-add-listner1 brz-cursor-point brz-hover-text-grey">
+				<i class="fa fa-server brz-text-blue-grey"></i>&nbsp; {$TEXT->_uni-Dashboard}
+			</a>
+		
+			<a id="brz-add-listner1-users" title="{$TEXT->_uni-Manage_users}" onclick="sidenav_close();manageUsers(0,0,1);" class="brz-small brz-padding brz-add-listner1 brz-cursor-point brz-hover-text-grey">
+				<i class="fa fa-users brz-text-blue-grey"></i>&nbsp; {$TEXT->_uni-Manage_users}
+			</a>
+		
+			<a id="brz-add-listner1-rep" title="{$TEXT->_uni-Manage_reports}" onclick ="sidenav_close();loadReports(0,1,1);" class="brz-small brz-padding brz-add-listner1 brz-cursor-point brz-hover-text-grey">
+				<i class="fa fa-flag brz-text-blue-grey"></i>&nbsp; {$TEXT->_uni-Manage_reports}
+			</a>
+		
+		</div>
+
+		<div style="margin-top:3px !important;" onclick="toggleAdminCates('MANA_CONTAINER');" class="brz-small brz-cursor-pointer brz-leftbar brz-border-grey brz-text-bold brz-padding" >
+			{$TEXT->_uni-MANAGE}
+		</div>
+		
+		<div id="MANA_CONTAINER" class="brz-admin-cat" style="display:none;" >
+		
+			<a id="brz-add-listner1-bb" onclick ="sidenav_close();loadBackgrounds();" class="brz-small brz-padding brz-add-listner1 brz-cursor-point brz-hover-text-grey">
+				<i class="fa fa-th-large brz-text-blue-grey"></i>&nbsp; {$TEXT->_uni-Post_backgrounds}
+			</a>
+			<a id="brz-add-listner1-cats" onclick ="sidenav_close();loadCategories();" class="brz-small brz-padding brz-add-listner1 brz-cursor-point brz-hover-text-grey">
+				<i class="fa fa-filter brz-text-blue-grey"></i>&nbsp; {$TEXT->_uni-Page_categories}
+			</a>		
+			<a id="brz-add-listner1-ll" onclick ="sidenav_close();loadLanguages();" class="brz-small brz-padding brz-add-listner1 brz-cursor-point brz-hover-text-grey">
+				<i class="fa fa-globe brz-text-blue-grey"></i>&nbsp; {$TEXT->_uni-Manage_languages}
+			</a>
+			<a id="brz-add-listner1-6" onclick ="sidenav_close();manageAdds();" class="brz-small brz-padding brz-add-listner1 brz-cursor-point brz-hover-text-grey">
+				<i class="fa fa-cubes brz-text-blue-grey"></i>&nbsp; {$TEXT->_uni-Manage_adds}
+			</a>
+		
+		</div>
+
+		<div style="margin-top:3px !important;" onclick="toggleAdminCates('SET_CONTAINER');" class="brz-small brz-cursor-pointer brz-leftbar brz-border-grey brz-text-bold brz-padding" >
+			{$TEXT->_uni-MAJOR_SETTINGS}
+		</div>
+		
+		<div id="SET_CONTAINER" class="brz-admin-cat" style="display:none;" >
+		
+			<a id="brz-add-listner1-4" onclick ="sidenav_close();loadThemes();" class="brz-small brz-padding brz-add-listner1 brz-cursor-point brz-hover-text-grey">
+				<i class="fa fa-desktop brz-text-blue-grey"></i>&nbsp; {$TEXT->_uni-Website_themes}
+			</a>
+		
+			<a id="brz-add-listner1-2" onclick ="sidenav_close();loadWebSettings();" class="brz-small brz-padding brz-add-listner1 brz-cursor-point brz-hover-text-grey">
+				<i class="fa fa-cog brz-text-blue-grey"></i>&nbsp; {$TEXT->_uni-Website_settings}
+			</a>
+			
+			<!-- EXT_SLOT_NAV_1 -->
+		
+			<a id="brz-add-listner1-3" onclick ="sidenav_close();loadNewregsettings();" class="brz-small brz-padding brz-add-listner1 brz-cursor-point brz-hover-text-grey">
+				<i class="fa fa-cogs brz-text-blue-grey"></i>&nbsp; {$TEXT->_uni-User_settings}
+			</a>
+		
+		</div>
+		
+	    <div style="margin-top:3px !important;" onclick="toggleAdminCates('EXT_SET_CONTAINER');" class="brz-small brz-cursor-pointer brz-leftbar brz-border-grey brz-text-bold brz-padding" >
+			{$TEXT->_uni-EXTENSIONS_SETTINGS}
+		</div>
+		
+		<div id="EXT_SET_CONTAINER" class="brz-admin-cat" style="display:none;" >
+		    
+			<!-- EXT_SLOT_NAV_4 -->
+			
+			<a id="brz-add-listner1-ex" onclick ="sidenav_close();loadExtensions();" class="brz-small brz-padding brz-add-listner1 brz-cursor-point brz-hover-text-grey">
+				<i class="fa fa-plug brz-text-blue-grey"></i>&nbsp; {$TEXT->_uni-Extensions}
+			</a>
+			
+			<!-- EXT_SLOT_NAV_3 -->
+			
+		</div>
+		
+		<div style="margin-top:3px !important;" onclick="toggleAdminCates('COR_CONTAINER');" class="brz-small brz-cursor-pointer brz-leftbar brz-border-grey brz-text-bold brz-padding" >
+			{$TEXT->_uni-CORE_SETTINGS}
+		</div>
+		
+		<div id="COR_CONTAINER" class="brz-admin-cat" style="display:none;" >
+		
+		
+			<a id="brz-add-listner1-web" onclick ="sidenav_close();updateWebsite();" class="brz-small brz-padding brz-add-listner1 brz-cursor-point brz-hover-text-grey">
+				<i class="fa fa-undo brz-text-blue-grey"></i>&nbsp; {$TEXT->_uni-Update_website}
+			</a>
+			<a id="brz-add-listner1-patch" onclick ="sidenav_close();patchWebsite();" class="brz-small brz-padding brz-add-listner1 brz-cursor-point brz-hover-text-grey">
+				<i class="fa fa-code-fork brz-text-blue-grey"></i>&nbsp; {$TEXT->_uni-apply_patch}
+			</a>		
+		
+		</div>
+		
+	    <div style="margin-top:3px !important;" onclick="toggleAdminCates('ADM_SET_CONTAINER');" class="brz-small brz-cursor-pointer brz-leftbar brz-border-grey brz-text-bold brz-padding" >
+			{$TEXT->_uni-ADMIN_SETTINGS}
+		</div>
+		
+		<div id="ADM_SET_CONTAINER" class="brz-admin-cat" style="display:none;" >
+			
+			<!-- EXT_SLOT_NAV_2 -->
+			
+			<a id="brz-add-listner1-e" onclick ="sidenav_close();editAdmin();" class="brz-small brz-padding brz-add-listner1 brz-cursor-point brz-hover-text-grey">
+				<i class="fa fa-key brz-text-blue-grey"></i>&nbsp; {$TEXT->_uni-Edit_pass}
+			</a>
+			
+			<a id="user_logout_a" onclick ="admin_logOut();" class="brz-small brz-padding brz-add-listner1 brz-cursor-point brz-hover-text-grey">
+				<i class="fa fa-sign-out brz-text-blue-grey"></i>&nbsp; {$TEXT->_uni-Log_out}
+			</a>
+			
+		</div>
+		
+        <br><br><br>
+		
+	</div>
+
+</nav>
+
+<div class="brz-overlay brz-hide-large brz-animate-opacity" onclick="sidenav_close()" style="cursor: pointer; display: none;" title="close side menu" id="myOverlay"></div>
+
+<div id="languages" style="display:none;" class="brz-modal">
+	<div class="brz-modal-content2 brz-animate-zoom brz-clear brz-card-8" style="height:auto;">
+		<div class="brz-border brz-border-pink">
+			<div class="brz-pink-light brz-clear brz-padding brz-medium brz-text-bold brz-full">
+			    <span class="brz-left">{$TEXT->_uni-Languages}</span>
+			</div>
+			<div style="max-height:200px;overflow:auto;" class="brz-white nicescrollit brz-clear brz-padding brz-small brz-full">
+			    <span class="brz-left">{$TEXT->TEMP-available-languages}</span>
+			</div>
+			<div class="brz-super-grey brz-clear brz-border-top brz-padding brz-small brz-full">
+			    <div onclick="$('#languages').fadeOut();" class="brz-tag brz-blue brz-hover-blue-hd brz-padding brz-cursor-pointer brz-right brz-text-white brz-text-bold brz-small">{$TEXT->_uni-CLOSE}</div>
+			</div>
+		</div>	
+	</div>
+</div>

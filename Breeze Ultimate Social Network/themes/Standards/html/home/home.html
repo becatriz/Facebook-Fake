@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Set charset -->
+    <meta charset="UTF-8" />
+
+	<!-- Attach FAVICON -->
+	<link rel="apple-touch-icon" sizes="57x57" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<!-- Website title -->  
+	<title>{$TEXT->_uni-Welcome_to} {$TEXT->title} | {$TEXT->_uni-web_ttl_l_s_free}</title>
+	
+	<!-- Set window width to device width --> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- EXT_SLOT_SHEET_1 -->
+	
+	<!-- Import CSS styles -->
+	<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/W3.css{$TEXT->REFRESH_CODE}">
+	<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/theme.css{$TEXT->REFRESH_CODE}">
+    <link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/welcome.css{$TEXT->REFRESH_CODE}">
+    
+	<!-- EXT_SLOT_SHEET_2 -->
+
+	<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/font-awesome.css">
+	
+	<!-- Installation URl-->
+	<script type="text/javascript">var installation = '{$TEXT->installation}';var theme = '{$TEXT->theme}';</script>
+
+	<!-- EXT_SLOT_JS_1 -->
+	
+	<!-- Import JS scripts -->
+	<script src='{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.js'></script>
+	<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.placeholder.js"></script>
+	<script src="{$TEXT->installation}/themes/{$TEXT->theme}/js/welcome.js{$TEXT->REFRESH_CODE}"></script>
+
+	<!-- EXT_SLOT_JS_2 -->
+	
+</head>
+
+<!-- Apply font -->
+<style>h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}</style>
+
+<body style="background-image:url('{$TEXT->installation}/themes/{$TEXT->theme}/img/backgrounds/background{$TEXT->B_IMG}.jpg') !important;">
+
+<!-- Navbar -->
+<div  class="brz-top brz-blue-hd brz-large" style="z-index:3;">
+  <ul class="brz-navbar brz-welome-tab brz-card-2"  style="border-radius: 0px !important;">
+	
+	<div class="brz-welome-padd-in centerit brz-1400 brz-clear">
+	    
+		<div class="brz-left brz-clear">
+			<div class="brz-padding-8 brz-padding">
+	        
+				<img id="PRELOD_IT" class="brz-welome-padd-in-logo2 brz-add-preloader" alt="" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/brz-ultimate2.png" >
+				<img class="brz-welome-padd-in-logo" alt="" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/brz-ultimate3.png" >
+		
+				
+			</div>
+		</div>
+		
+		<div class="brz-hide-small">
+			<div class="brz-clear brz-no-overflow brz-padding" >   
+
+				<table style="width:350px;" role="presentation" class="brz-small brz-right" cellspacing="0">
+					<tbody>
+					<form class="brz-container" onsubmit="return submitLogin(event,1);">
+					<tr>
+						<td>
+							<label class="brz-welcome-font">{$TEXT->_uni-enter_email}</label>
+						</td>
+						<td>
+							<label class="brz-welcome-font">{$TEXT->_uni-Password}</label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input id="login-name-dr" class="brz-border brz-text-grey brz-small brz-welcome-input" value="">
+						</td>
+						<td>
+							<input id="login-pass-dr" class="brz-border brz-text-grey brz-small brz-welcome-input" value="" type="password">
+						</td>
+						<td>
+							<button type="submit" class="brz-padding-tiny2 brz-btn-round2 brz-tag brz-blue brz-tiny brz-hover-blue-hd brz-cursor-pointer brz-text-white brz-log-in-welkcome brz-text-bold">{$TEXT->_uni-LOG_IN}</button>
+						</td>
+					</tr>
+					<tr>
+						<td class="login_form_label_field"></td>
+						<td class="login_form_label_field">
+							<div>
+								<span onclick="$('#reset-modal').fadeIn();" class="brz-small brz-cursor-pointer brz-opacity brz-underline-hover" >{$TEXT->_uni-Forgotten_password_}</span>
+							</div>
+						</td>
+					</tr>
+					</form>
+					</tbody>
+				</table>
+	        </div>
+		</div>	
+	</div>
+  </ul>
+</div>
+	
+<!-- Recent login modal -->	   
+<div id="login-modal-recent" style="display:none;" class="brz-modal">
+
+	<!-- Modal content -->
+	<div id="login-modal-recent-content" class="brz-modal-content3 brz-white brz-card-8 brz-round" style="height:auto;">
+	    <span id="login-modal-recent-close" onclick="$('#login-modal-recent').fadeOut();" style="padding:0px 5px 10px 15px;" class="brz-button brz-text-super-grey brz-hover-text-black brz-cursor-pointer brz-display-topright"><i class="fa fa-times brz-text-bold"></i></span>
+		<div align="center">
+		    <div class="brz-padding-32">
+        		<img class="brz-round-xlarge" id="login-modal-recent-img" alt="" src="">
+			</div>		
+            <div class="brz-padding">
+				<div id="login-modal-recent-name" class="brz-large-min brz-welome-black">
+				</div>
+				<div class="brz-padding-large"> 	
+					<input id="login-modal-recent-add-name" class="brz-input brz-hide brz-border brz-round" type="text" value="">
+					<input id="login-modal-recent-add-pass" class="brz-input brz-small brz-border brz-round" type="password" placeholder="{$TEXT->_uni-Password}" value="">
+                    <div class="brz-padding-16">
+						<div onclick="reLogin();" style="width:100%;" class="brz-tag brz-round-50 brz-blue brz-hover-blue-hd brz-cursor-pointer brz-text-white brz-text-bold brz-small brz-padding-8">{$TEXT->_uni-LOG_IN}</div>
+				    </div>		
+					<hr>
+					<span onclick="$('#login-modal-recent').fadeOut(200,function(){$('#reset-modal').fadeIn(200)});" class="brz-underline-hover brz-text-blue-dark brz-padding-top brz-small brz-cursor-pointer">{$TEXT->_uni-Forgotten_password_}</span>		
+				</div>
+            </div>
+		</div>
+	</div> 	
+</div>
+	
+<!-- Languages -->		 
+<div id="languages" style="display:none;" class="brz-modal">
+	<div class="brz-modal-content2 brz-animate-zoom brz-clear brz-card-8" style="height:auto;">
+		<div class="brz-border brz-border-pink">
+			<div class="brz-pink-light brz-clear brz-padding brz-medium brz-text-bold brz-full">
+			    <span class="brz-left">{$TEXT->_uni-Languages}</span>
+			</div>
+			<div style="max-height:200px;overflow:auto;" class="brz-white nicescrollit brz-clear brz-padding brz-small brz-full">
+			    <span class="brz-left">{$TEXT->TEMP-available-languages}</span>
+			</div>
+			<div class="brz-super-grey brz-clear brz-border-top brz-padding brz-small brz-full">
+			    <div onclick="$('#languages').fadeOut();" class="brz-tag brz-padding brz-pink-light brz-cursor-pointer brz-right brz-text-white brz-text-bold brz-small">{$TEXT->_uni-CLOSE}</div>
+			</div>
+		</div>	
+	</div>
+</div>
+
+<!-- Password recovery -->	
+<div id="reset-modal" style="display:none;" class="brz-modal">
+	<div class="brz-modal-content2 brz-animate-zoom brz-clear brz-card-8" style="height:auto;">
+		<div class="brz-border brz-border-pink">
+			<div class="brz-pink-light brz-clear brz-padding brz-medium brz-text-bold brz-full">
+			    <span class="brz-left"><i class="fa fa-lock brz-margin-right"></i>{$TEXT->_uni-Locked_o}</span>
+			</div>
+			<div style="max-height:200px;overflow:auto;" class="brz-white nicescrollit brz-clear brz-padding brz-small brz-full">
+			    <span class="brz-left">
+				    <label><i class="fa fa-circle nav-item-text-inverse brz-tiny-x brz-text-red"></i> {$TEXT->_uni-forgert_ttl}</label>
+  
+		            <div class="brz-clear brz-padding-16">			
+						<div class="brz-col s4 brz-padding-medium">
+				            <span class="brz-right brz-text-bold brz-text-grey">{$TEXT->_uni-Username}</span>
+			            </div>
+			            <div class="brz-col s6 brz-padding-medium">
+				            <span class="brz-left">
+								<input id="forgot-password-page-username" class="nav-item-text-inverse brz-border brz-text-grey brz-small brz-card" placeholder="{$TEXT->_uni-Username}">
+							</span>
+						</div>	 
+					</div>
+     
+				</span>
+			</div>
+			<div class="brz-super-grey brz-clear brz-border-top brz-padding brz-small brz-full">
+			    <div onclick="resetPassword();" class="brz-tag brz-border-one brz-green brz-hover-dark-green brz-padding brz-cursor-pointer brz-right brz-text-white brz-text-bold brz-small">{$TEXT->_uni-RESET} <i class="fa fa-check"></i></div>
+			    <div onclick="$('#reset-modal').fadeOut();" class="brz-tag brz-border-two brz-pink-light brz-padding brz-cursor-pointer brz-right brz-text-white brz-text-bold brz-small">{$TEXT->_uni-CLOSE}</div>
+			</div>
+		</div>	
+	</div>
+</div>
+
+<!-- Administration login -->
+<div id="admin-modal" style="display:none;" class="brz-modal">
+	<div class="brz-modal-content2 brz-animate-zoom brz-clear brz-card-8" style="height:auto;">
+		<div class="brz-border brz-border-pink">
+			<div class="brz-pink-light brz-clear brz-padding brz-medium brz-text-bold brz-full">
+			    <span class="brz-left"><i class="fa fa-briefcase brz-margin-right"></i>{$TEXT->_uni-Admin_manage_tip}</span>
+			</div>
+			<div style="max-height:250px;overflow:auto;" class="brz-white brz-clear brz-padding brz-small brz-full">
+			    <form class="brz-left" onsubmit="return submitAdmin(event);">    
+                    <p><label><i class="fa fa-user"></i> {$TEXT->_uni-Admin_username_tip}</label></p>
+		            <div class="brz-clear brz-padding-8">			
+						<div class="brz-col s4 brz-padding-medium">
+				            <span class="brz-right brz-text-bold brz-text-grey">{$TEXT->_uni-Username}</span>
+			            </div>
+			            <div class="brz-col s6 brz-padding-medium">
+				            <span class="brz-left">
+								<input id="admin-page-name" class="nav-item-text-inverse brz-border brz-text-grey brz-small brz-card" placeholder="{$TEXT->_uni-Username}">
+							</span>
+						</div>	 
+					</div>	
+					<p><label><i class="fa fa-key"></i> {$TEXT->_uni-Admin_password_tip}</label></p>
+		            <div class="brz-clear brz-padding-8">			
+						<div class="brz-col s4 brz-padding-medium">
+				            <span class="brz-right brz-text-bold brz-text-grey">{$TEXT->_uni-Password}</span>
+			            </div>
+			            <div class="brz-col s6 brz-padding-medium">
+				            <span class="brz-left">
+								<input id="admin-page-password" type="password" class="nav-item-text-inverse brz-border brz-text-grey brz-small brz-card" placeholder="{$TEXT->_uni-Password}">
+							</span>
+						</div>	 
+					</div>
+					<input type="submit" id="submit_admin" onclick="submitAdmin(e);" style="display:none;" class="brz-hide"></button>
+				</form>
+			</div>
+			<div class="brz-super-grey brz-clear brz-border-top brz-padding brz-small brz-full">
+			    <div onclick="directAdmin();" class="brz-tag brz-border-one brz-green brz-hover-dark-green brz-padding brz-cursor-pointer brz-right brz-text-white brz-text-bold brz-small">{$TEXT->_uni-LOG_IN} <i class="fa fa-sign-in"></i></div>
+			    <div onclick="$('#admin-modal').fadeOut();" class="brz-tag brz-border-two brz-pink-light brz-padding brz-cursor-pointer brz-right brz-text-white brz-text-bold brz-small">{$TEXT->_uni-CLOSE}</div>
+			</div>
+		</div>	
+	</div>
+
+</div>
+
+<!-- Main page -->
+<div style="margin-top: 100px;" class="brz-row-padding centerit brz-1400 brz-container">
+    <div class="brz-half brz-hide-small brz-padding-16">
+	    <div class="brz-welome-padd-in2">
+			<div id="CONTENT_MAIN_DISPLAY" style="display:none;">
+			    <div style="max-width:450px;" class="brz-large-min brz-left-align brz-left brz-text-bold brz-welome-dark-blue">
+		            {$TEXT->web_name} {$TEXT->_uni-Welcome_notice}
+			    </div>
+		        <img style="max-width:400px;" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/people.png"></img>
+			</div>	
+			{$TEXT->content_main_page}
+		</div>
+    </div>
+    <div class="brz-half brz-welome-padd-in2">
+	    {$TEXT->content_redirect}
+		<div class="brz-padding-welcome-right">
+		    <div id="response" class="brz-margin-mossb"></div>
+
+		    <!-- EXT_SLOT_BOTH_1 -->  
+			<div id="REGISTERATION_FORM">
+				<div class="brz-clear">
+		        	<div class="brz-xxnlarge brz-text-bold brz-welcome-black">{$TEXT->_uni-Create_an_account}</div>
+		        	<div class="brz-medium brz-welcome-black">{$TEXT->_uni-Its_fre_ill_e}</div>
+		   		</div>
+				<form class="brz-container" onsubmit="return submitRegistration(event);">  
+					<div class="brz-text-bold brz-padding-8">
+                    	<div class="brz-clear brz-hide-small">
+							<div class="brz-half brz-padding-right-welcome">
+								<input id="signup-page-fname" class="brz-input brz-in2 brz-round-xlarge brz-border" placeholder="{$TEXT->_uni-First_name}" type="text">
+							</div>
+				    		<div class="brz-half">
+								<input id="signup-page-lname" class="brz-input brz-in2 brz-round-xlarge brz-border" placeholder="{$TEXT->_uni-Last_name}" type="text">
+							</div>
+						</div>
+				    	<div class="brz-clear brz-padding-8">
+							<input id="signup-page-name" class="brz-input brz-in2 brz-round-xlarge brz-border" placeholder="{$TEXT->_uni-Choose_username}" type="text">
+						</div>
+ 				    	<div class="brz-clear">
+							<input id="signup-page-email" class="brz-input brz-in2 brz-round-xlarge brz-border" placeholder="{$TEXT->_uni-enter_email}" type="text">
+						</div>
+ 				    	<div class="brz-clear brz-padding-8">
+							<input id="signup-page-password" class="brz-input brz-in2 brz-round-xlarge brz-border" placeholder="{$TEXT->_uni-Choose_password}" type="password">
+						</div>	
+ 				    	<div class="brz-clear">
+							<p id="element_captcha" class="field brz-text-{$TEXT->font_colors_welcome}"><img src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/loader.gif" width="30" height="30"></img></p>
+            		    </div>					
+ 				    	<div class="brz-clear brz-padding-8">
+							<span class="brz-padding"><input type="radio" id="gender_radio2" name="gender_radio" value="2" /><label for="gender_radio2" class="brz-padding-right-welcome brz-welcome-black brz-xxnx-large"> {$TEXT->_uni-Female}</label></span>
+							<span class="brz-padding"><input type="radio" id="gender_radio1" name="gender_radio" value="1" /><label for="gender_radio1" class="brz-xxnx-large brz-welcome-black"> {$TEXT->_uni-Male}</label></span>
+						</div>
+ 				    	<div style="max-width:300px;" class="brz-clear brz-nnnx-large brz-welcome-grey brz-no-bold brz-padding-8">
+							{$TEXT->_uni-welcome_note_big}
+						</div>									
+ 				    	<div class="brz-clear">		    
+							<button type="submit" class="brz-welcome-btn brz-cursor-pointer">
+						    	{$TEXT->_uni-Create_an_account}
+							</button>
+
+							<!-- EXT_SLOT_SINGUP_1 -->
+
+						</div>					
+ 				    	<div class="brz-clear brz-padding-16">
+                    		<div class="brz-clear brz-welcome-grey brz-medium">
+								{$TEXT->_uni-Already_joined_} <span onclick="$('#REGISTERATION_FORM').slideUp(100,function(){$('#LOGIN_FORM').slideDown(100);});" class="brz-cursor-pointer brz-underline-hover brz-text-blue-dark">{$TEXT->_uni-LOG_IN}</a>.
+							</div>
+						</div>					
+					</div>
+		    	</form>				
+	    	</div>
+			<div id="LOGIN_FORM" style="display:none;">
+				<div class="brz-clear">
+		        	<div class="brz-xxnlarge brz-text-bold brz-welcome-black">{$TEXT->_uni-LOG_IN} </div> 
+		   		</div>
+				<form class="brz-container" onsubmit="return submitLogin(event);"> 
+					<div class="brz-text-bold brz-padding-8">
+ 				    	<div class="brz-clear">
+							<input id="login-page-name" class="brz-input brz-in2 brz-round-xlarge brz-border" placeholder="{$TEXT->_uni-enter_email}" type="text">
+						</div>
+ 				    	<div class="brz-clear brz-padding-8">
+							<input id="login-page-password" class="brz-input brz-in2 brz-round-xlarge brz-border" placeholder="{$TEXT->_uni-Password}" type="password">
+						</div>	
+ 				    	<div class="brz-clear brz-padding-8"> 
+							<button type="submit" class="brz-welcome-btn brz-cursor-pointer">
+						    	{$TEXT->_uni-LOG_IN}
+							</button>
+
+                            <!-- EXT_SLOT_LOGIN_1 -->	
+							
+						</div>	
+						
+ 				    	<div class="brz-clear brz-padding-16">
+                    		<div class="brz-clear brz-welcome-grey brz-medium">
+								{$TEXT->_uni-Not_registered_} <span onclick="$('#LOGIN_FORM').slideUp(100,function(){$('#REGISTERATION_FORM').slideDown(100);});" class="brz-cursor-pointer brz-underline-hover brz-text-blue-dark">{$TEXT->_uni-Create_an_account}</a>.
+							</div>
+						</div>					
+					</div>	   
+		    	</form>			
+	    	</div>
+
+            <!-- EXT_SLOT_BOTH_2 -->
+			
+		</div>   	
+    </div>
+</div>
+
+<div class="brz-white brz-container brz-welcome-padding centerit brz-margin-top brz-card">
+	<div class="brz-1050 centerit">
+        <span style="padding:0px !important;" class="brz-container brz-text-grey brz-small">
+	        {$TEXT->_uni-Language} : {$TEXT->TEMP-active_lang} <button onclick="$('#languages').fadeIn();" class="brz-new_btn brz-act-it brz-round brz-padding-side brz-text-bold brz-tiny-2 brz-text-grey brz-margin-left"><i class="fa fa-plus brz-text-super-grey"></i></button>
+	    </span>
+	    <hr class="brz-margin">
+	    <div class="brz-clear">
+		    <a href="#" onclick="$('#login-page-name').focus();" class="brz-text-blue-hd brz-welcome-text-item-1 brz-underline-hover brz-small">{$TEXT->_uni-LOG_IN}</a>
+		    <a href="#" onclick="$('#signup-page-name').focus();" class="brz-text-blue-hd brz-welcome-text-item-1 brz-underline-hover brz-small">{$TEXT->_uni-SIGN_UP}</a>
+    
+		    <a href="{$TEXT->installation}/browse/privacy" class="brz-text-blue-hd brz-welcome-text-item-1 brz-underline-hover brz-small">{$TEXT->_uni-Privacy}</a>
+		    <a href="{$TEXT->installation}/browse/terms" class="brz-text-blue-hd brz-welcome-text-item-1 brz-underline-hover brz-small">{$TEXT->_uni-terms_}</a>
+		    <a href="{$TEXT->installation}/browse/libs" class="brz-text-blue-hd brz-welcome-text-item-1 brz-underline-hover brz-small">{$TEXT->_uni-Libraries}</a>		
+	        <a href="{$TEXT->installation}/browse/developers" class="brz-text-blue-hd brz-welcome-text-item-1 brz-underline-hover brz-small">{$TEXT->_uni-Developers}</a>	
+	        <a href="#" onclick="$('#languages').fadeIn();" class="brz-text-blue-hd brz-welcome-text-item-1 brz-underline-hover brz-small">{$TEXT->_uni-Languages}</a>	
+	        <a href="{$TEXT->installation}/browse/home" class="brz-text-blue-hd brz-welcome-text-item-1 brz-underline-hover brz-small">{$TEXT->_uni-About}</a>	
+    	</div>
+	    <div class="brz-clear">
+	    	<a href="#" onclick="$('#reset-modal').fadeIn();" class="brz-text-blue-hd brz-welcome-text-item-1 brz-underline-hover brz-small">{$TEXT->_uni-Help_log}</a>
+		    <a href="#" onclick="$('#admin-modal').fadeIn();" class="brz-text-blue-hd brz-welcome-text-item-1 brz-underline-hover brz-small">{$TEXT->_uni-Manage}</a>
+    	</div>
+
+	    <div style="margin-top:10px !important;" class="brz-container brz-tiny brz-text-black">
+	        <span class="brz-small">&copy;</span> {$TEXT->web_name} {$TEXT->_uni-All_rights_reserved}
+	    </div>
+    </div>
+</div>
+
+<!-- Attach AJAX response -->
+<div id="attach-response"></div>
+
+<!-- EXT_SLOT_JS_3 -->
+
+<!-- Check for captcha test -->
+<script>
+{$TEXT->temp-CAPTCHA_AVAIL}
+{$TEXT->temp-REF_AVAIL}
+
+// Reload placeholder plugin if IE<10
+$('input, textarea').placeholder({customClass:'my-placeholder'});
+
+</script>
+
+<!-- EXT_SLOT_PAGE_END -->
+
+</body>
+</html>

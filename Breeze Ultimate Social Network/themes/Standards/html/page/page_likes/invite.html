@@ -1,0 +1,20 @@
+<div id="suggestions_dynamic_view_{$TEXT->temp-user_id}" class="brz-clear">
+    <div class="brz-left">
+        <img class="brz-image-margin-right brz-border brz-border-super-grey" onclick="loadProfile({$TEXT->temp-user_id})" src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-user_image}&fol=a&w=26&h=26">
+    </div>
+    <div class="brz-right brz-small">
+        <button class="brz-new_btn brz-round brz-padding-standard brz-text-bold brz-tiny-2 brz-text-grey" onclick="inviteFriend({$TEXT->temp-invite_cnt},{$TEXT->temp-user_id});">{$TEXT->_uni-Invite}</button>
+    </div>
+    <div class="">
+        <div class="brz-small brz-no-overflow">
+            <div>
+                <span title="{$TEXT->temp-user_ttl}" onclick="loadProfile({$TEXT->temp-user_id})" class="brz-text-bold brz-cursor-pointer brz-text-blue-dark brz-underline-hover">
+                    {$TEXT->temp-user_name_25} 
+					<span class="nav-item-text-inverse">
+					{$TEXT->temp-user_verified_batch}
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
